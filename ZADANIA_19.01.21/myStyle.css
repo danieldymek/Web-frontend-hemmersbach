@@ -1,0 +1,34 @@
+body {
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+h1 {
+    color: white;
+    padding: 10px 20px 5px 10px;
+    
+}
+
+
+.tekst {
+    color: white;
+    font-size: 40px;
+}
+
+#new {
+    color: white;
+/*    color: rgb(0,255,0);*/
+}
+
+#button {
+    border-radius: 100px;
+    background-color: rgba(33,56,154, 0,5);
+}
+#myText {
+    border-radius: 100px;
+}
+#textButton {
+    border-radius: 100px;
+    width: 200px;
+}

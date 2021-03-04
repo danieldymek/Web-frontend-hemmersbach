@@ -1,0 +1,33 @@
+.dodawanie {
+    width: 50%;
+    height: 320px;
+    background-color: orange;
+    float: left;
+    text-align: center;
+}
+
+.odejmowanie {
+    width: 50%;
+    height: 320px;
+    background-color: green;
+    float: left;
+    text-align: center;
+}
+
+.mnozenie {
+    width: 50%;
+    height: 320px;
+    background-color: yellow;
+    clear: both;
+    float: left;
+    text-align: center;
+}
+
+.dzielenie {
+    width: 50%;
+    height: 320px;
+    background-color: red;
+    float: left;
+    text-align: center;
+}
+

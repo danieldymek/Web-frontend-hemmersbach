@@ -1,0 +1,59 @@
+.main {
+    background-color:
+
+}
+
+.header {
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+.navBar {
+    float: left;
+    min-height: 600px;
+    background-color: aquamarine;
+    width: 20%;
+    line-height: px;
+    text-align: center;
+    text-justify: auto;
+
+}
+
+.content {
+    float: left;
+    min-height: 600px;
+    background-color: lightgoldenrodyellow;
+    width: 60%;
+    text-align: center;
+
+
+}
+
+.ad {
+    float: left;
+    min-height: 600px;
+    width: 20%;
+    background-color: cadetblue;
+    max-height: 600px;
+    text-align: center;
+}
+
+.footer {
+    clear: both;
+    background-color: gray;
+    min-height: 50px;
+    text-align: center;
+    line-height: 50px;
+
+}
+
+.logo {
+    width: 75px;
+    margin-left: 340px;
+    margin-top: 10px;
+
+
+}
