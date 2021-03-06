@@ -8,11 +8,11 @@ function randomPass(initialPasswordLenght) {
         var passwordToString = generatedPasswordTable.join("")
     }
     console.log(passwordToString)
-    navigator.clipboard.writeText(passwordToString).then(function() {
-        alert('Async: Copying to clipboard was successful!');
-      }, function(err) {
-        alert('Async: Could not copy text: ', err);
-      });
+    // navigator.clipboard.writeText(passwordToString).then(function() {
+    //     alert('Async: Copying to clipboard was successful!');
+    //   }, function(err) {
+    //     alert('Async: Could not copy text: ', err);
+    //   });
     //    console.log(passwordToString.length)
 
 }
