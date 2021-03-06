@@ -1,0 +1,19 @@
+#goblin {
+    width: 250px;
+    height: 250px;
+    float:left;
+    background-color:aqua;
+    
+}
+#troll {
+    width: 250px;
+    height: 250px;
+    float: left;
+    background-color:red;
+}
+.fightStatusTroll {
+    text-align: center;
+}
+.fightStatusGob {
+    text-align: center;
+}
