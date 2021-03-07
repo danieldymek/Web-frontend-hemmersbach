@@ -43,3 +43,29 @@ function getNumbersAndGenerate() {
     gen(passLength, passCount)
 
 }
+function ifFocusIsLost(){
+    if(document.hasFocus() == false){
+        
+    var generatedPass = document.getElementsByClassName("randomPw");
+        for (var i = 0; i < generatedPass.length; i++) {
+            generatedPass[i].remove();
+            if(generatedPass.length > 0) {
+                console.log("clearing... " + generatedPass.length + " left")
+
+            }
+            if(generatedPass.length == 0) {
+                console.log("clearing " + "done")
+
+            }
+            
+     }
+    } 
+}
+
+
+window.setInterval(ifFocusIsLost, 1);
+
+
+
+
+
