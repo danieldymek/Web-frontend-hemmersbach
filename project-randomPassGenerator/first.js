@@ -43,6 +43,7 @@ function getNumbersAndGenerate() {
     gen(passLength, passCount)
 
 }
+//clearing when focus is lost
 function ifFocusIsLost(){
     if(document.hasFocus() == false){
         
@@ -63,7 +64,7 @@ function ifFocusIsLost(){
 }
 
 
-window.setInterval(ifFocusIsLost, 1);
+window.setInterval(ifFocusIsLost, 2);
 
 
 
