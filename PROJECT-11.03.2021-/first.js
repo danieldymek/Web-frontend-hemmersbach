@@ -53,3 +53,6 @@ const printLenghtArrowFunc = (KoszykList) =>{
 printLenghtArrowFunc(koszykDB1)
 //funkcja strzalkowa
 // stworz obiekty i w tych obiektach zrobic jakie kto ma imie, ile kto ma lat i ile kto wazy i zeby wyswietlilo srednia wage osob ktore maja powyzej 18 lat
+
+
+
