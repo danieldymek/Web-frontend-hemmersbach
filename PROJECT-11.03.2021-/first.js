@@ -54,5 +54,43 @@ printLenghtArrowFunc(koszykDB1)
 //funkcja strzalkowa
 // stworz obiekty i w tych obiektach zrobic jakie kto ma imie, ile kto ma lat i ile kto wazy i zeby wyswietlilo srednia wage osob ktore maja powyzej 18 lat
 
-
+//rand weight with minimum weight control
+const randomWeight = (minimumWeight) =>{
+    let toReturn = Math.floor(minimumWeight + (Math.random() * 50) );
+}
+//rand age but not lower than 18
+const randomAgeButMinimum18 = () =>{
+    let toReturn = Math.floor(18 + (Math.random() * 60) );
+}
+// rand age up to 90
+const randomAge = () =>{
+    let toReturn = Math.floor(Math.random() * 90 );
+}
+//users with pseudo random ages and random weights
+const userParameters_000 = {
+    IMIE: "ROBERT",
+    WIEK: 69,
+    WAGA: 0,
+}
+const userParameters_001 = {
+    IMIE: "KRYSTIAN",
+    WIEK: 69,
+    WAGA: 0,
+}
+const userParameters_002 = {
+    IMIE: "IRENEUSZ",
+    WIEK: 69,
+    WAGA: 0,
+}
+const userParameters_003 = {
+    IMIE: "NORBERT",
+    WIEK: 69,
+    WAGA: 0,
+}
+const userParameters_004 = {
+    IMIE: "LUKAS",
+    WIEK: 69,
+    WAGA: 0,
+}
+// here will be rest of the arrow function WIP
 
