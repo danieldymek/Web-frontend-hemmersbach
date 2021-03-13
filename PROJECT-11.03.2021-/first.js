@@ -105,6 +105,15 @@ const fromObjectsAvgWeightGetter = (obj) =>{
     })
     var weightOfAllUsers = weightTable.reduce((a, b) => a + b, 0);
     var avgWeightOfAllUsers = weightOfAllUsers / obj.length;
-    console.log(avgWeightOfAllUsers)
+    var message = "srednia wagowa wszystkich uzytkownikow(" + obj.length + ") to: " + avgWeightOfAllUsers
+    console.log(message)
+    var newElement = document.createElement("p");
+    var showWeightsElement = document.createElement("p");
+    showWeightsElement.innerHTML = weightTable
+    newElement.innerHTML = message;
+    document.body.appendChild(newElement)
+    document.body.appendChild(showWeightsElement)
+
+
 } 
 fromObjectsAvgWeightGetter(groupAllUsers)
