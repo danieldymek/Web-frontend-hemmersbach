@@ -57,40 +57,54 @@ printLenghtArrowFunc(koszykDB1)
 //rand weight with minimum weight control
 const randomWeight = (minimumWeight) =>{
     let toReturn = Math.floor(minimumWeight + (Math.random() * 50) );
+    return toReturn
 }
 //rand age but not lower than 18
 const randomAgeButMinimum18 = () =>{
     let toReturn = Math.floor(18 + (Math.random() * 60) );
+    return toReturn
 }
 // rand age up to 90
 const randomAge = () =>{
     let toReturn = Math.floor(Math.random() * 90 );
+    return toReturn
 }
 //users with pseudo random ages and random weights
 const userParameters_000 = {
     IMIE: "ROBERT",
-    WIEK: 69,
-    WAGA: 0,
+    WIEK: randomAgeButMinimum18(),
+    WAGA: randomWeight(50),
 }
 const userParameters_001 = {
     IMIE: "KRYSTIAN",
-    WIEK: 69,
-    WAGA: 0,
+    WIEK: randomAge(),
+    WAGA: randomWeight(40),
 }
 const userParameters_002 = {
     IMIE: "IRENEUSZ",
-    WIEK: 69,
-    WAGA: 0,
+    WIEK: randomAgeButMinimum18(),
+    WAGA: randomWeight(40),
 }
 const userParameters_003 = {
     IMIE: "NORBERT",
-    WIEK: 69,
-    WAGA: 0,
+    WIEK: randomAge(),
+    WAGA: randomWeight(30),
 }
 const userParameters_004 = {
     IMIE: "LUKAS",
-    WIEK: 69,
-    WAGA: 0,
+    WIEK: randomAge(),
+    WAGA: randomWeight(30),
 }
-// here will be rest of the arrow function WIP
 
+const groupAllUsers = [userParameters_000,userParameters_001,userParameters_002,userParameters_003,userParameters_004];
+// here will be rest of the arrow function WIP
+const fromObjectsAvgWeightGetter = (obj) =>{
+    var weightTable = [];
+    var calc = obj.map(newArr =>{
+        weightTable.push(newArr.WAGA)
+    })
+    var weightOfAllUsers = weightTable.reduce((a, b) => a + b, 0);
+    var avgWeightOfAllUsers = weightOfAllUsers / obj.length;
+    console.log(avgWeightOfAllUsers)
+} 
+fromObjectsAvgWeightGetter(groupAllUsers)
