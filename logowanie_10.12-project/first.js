@@ -93,3 +93,24 @@ console.log(factorialize(23));
 
 var test = prompt("siema");
 
+function calc (playerLevel){
+    MassageStudioUnlocklevel = 1
+    HairSalonUnlocklevel = 2
+    NailSalonUnlocklevel = 5
+    FootSpaUnlocklevel = 9
+    MakeupStudioUnlocklevel = 14
+    WaxBarUnlocklevel = 17
+    AromatherapyUnlocklevel = 19
+    HydrotherapyUnlocklevel = 21
+    FacialcareStudioUnlocklevel = 26
+    BodywrappingStudioUnlocklevel = 29
+    SaunaUnlocklevel = 35
+    BodysrubUnlocklevel = 42
+    var table = [MassageStudioUnlocklevel,HairSalonUnlocklevel,NailSalonUnlocklevel,FootSpaUnlocklevel,MakeupStudioUnlocklevel,WaxBarUnlocklevel,AromatherapyUnlocklevel,HydrotherapyUnlocklevel,FacialcareStudioUnlocklevel,BodywrappingStudioUnlocklevel,SaunaUnlocklevel,BodysrubUnlocklevel];
+    for (var i = 0; i < table.length; i++){
+        console.log((playerLevel - table[i])*2)
+    }
+    
+}
+calc(48)
+

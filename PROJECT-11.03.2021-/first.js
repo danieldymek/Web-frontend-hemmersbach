@@ -97,20 +97,39 @@ const userParameters_004 = {
 }
 
 const groupAllUsers = [userParameters_000,userParameters_001,userParameters_002,userParameters_003,userParameters_004];
-// here will be rest of the arrow function WIP
+
 const fromObjectsAvgWeightGetter = (obj) =>{
-    var weightTable = [];
-    var calc = obj.map(newArr =>{
-        weightTable.push(newArr.WAGA)
+    // var weightTable = [];
+    var legalAgeWeightTable = [];
+    //pushes weigths of all obj
+    // var calc = obj.map(newArr =>{
+    //     weightTable.push(newArr.WAGA)
+    // })
+    // adds weights from weightTable
+    // var weightOfAllUsers = weightTable.reduce((a, b) => a + b, 0);
+    // //avg
+    // var avgWeightOfAllUsers = weightOfAllUsers / obj.length;
+    // var message = "srednia wagowa wszystkich uzytkownikow(" + obj.length + ") to: " + avgWeightOfAllUsers
+    // console.log(message)
+
+    //finds all users above 18 and pushes to legalAgeWeightTable
+    
+    var find18 = obj.map(newArr =>{
+        if(newArr.WIEK >= 18) {
+            legalAgeWeightTable.push(newArr.WAGA)
+        
+        }
     })
-    var weightOfAllUsers = weightTable.reduce((a, b) => a + b, 0);
-    var avgWeightOfAllUsers = weightOfAllUsers / obj.length;
-    var message = "srednia wagowa wszystkich uzytkownikow(" + obj.length + ") to: " + avgWeightOfAllUsers
-    console.log(message)
+    //sums values from legalAgeWeightTable
+    var sumTotal18Users = legalAgeWeightTable.reduce((a, b) => a + b, 0);
+//avg and message
+    var avgOver18 = sumTotal18Users / legalAgeWeightTable.length
+    var messageOver18 = "srednia wagowa wszystkich pelnoletnich uzytkownikow(" + legalAgeWeightTable.length + ") to: " + avgOver18
+//display in html body
     var newElement = document.createElement("p");
     var showWeightsElement = document.createElement("p");
-    showWeightsElement.innerHTML = weightTable
-    newElement.innerHTML = message;
+    showWeightsElement.innerHTML = legalAgeWeightTable
+    newElement.innerHTML = messageOver18;
     document.body.appendChild(newElement)
     document.body.appendChild(showWeightsElement)
 
