@@ -8,6 +8,10 @@ function a(){
     console.log(getTrElementByClassName.length)//debug ilosci elementow o id newTrElement(tagi <tr>)
     var getTrElementLenght = getTrElementByClassName.length
     var getTrElement = document.getElementsByTagName("tr")[getTrElementLenght]
+
+    var deleteButton = document.createElement("button")
+    deleteButton.innerHTML = "X"
+    deleteButton.className = "deleteButton"
     // id
     var newTdElement5 = document.createElement("td")
     newTdElement5.innerHTML = getTrElementLenght - 1
@@ -41,9 +45,10 @@ function a(){
     getTrElement.appendChild(newTdElement2)//nazwisko
     getTrElement.appendChild(newTdElement3)//wiek
     getTrElement.appendChild(newTdElement4)//dostepnosc
+    getTrElement.appendChild(deleteButton)//button
 
 }
-//usuwanie userów buttonem
+//usuwanie userów przez UI do usuwania
 function b(){
     var getTrElement = document.getElementsByTagName("tr")
     var getTrElementsCount = getTrElement.length
@@ -58,3 +63,14 @@ function b(){
     }
 
 }
+
+// usuwanie userow przez button przy kazdym userze
+function c(){
+    var button = document.getElementById("deleteButton")[0];
+    button.onclick = function() {
+        console.log("asd")
+        console.log("test")
+    }
+}
+
+

@@ -69,3 +69,11 @@ th {
 /* // zeby najezdzajac na przycisk zmienial kolor hover */
 /* zrobienie warunku -> jezeli w jednym z pól nie ma nic -> make this button inactive */
 
+button {
+    transition-duration: 0.6s;
+  }
+  
+  button:hover {
+    background-color: rgb(0, 155, 95);
+    color: black;
+  }
