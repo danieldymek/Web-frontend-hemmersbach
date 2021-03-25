@@ -1,0 +1,71 @@
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: orange;
+    text-align-last: center;
+    
+
+}
+.leftBar{
+    width: 20%;
+    height: 700px;
+    background-color: green;
+    float:left;
+    font-size: x-large;
+    
+
+
+}
+.midContent{
+    width: 60%;
+    height: 700px;
+    background-color: lightskyblue;
+    float:left;
+    text-align: center;
+
+
+}
+.rightBar{
+    width: 20%;
+    height: 700px;
+    background-color: red;
+    float:left;
+    text-align: center;
+
+
+}
+ th, td {
+    border: 4px solid rgb(201, 10, 137);
+  }
+td {
+    color:rgb(0, 119, 255)
+  }
+th {
+    color:green
+  }
+  .tableDiv{
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      text-align-last: center;
+      background-color: rgb(236, 146, 11);
+  }
+#kontakty{
+    font-family: 'Chango', cursive;
+}
+#kontakty2{
+    font-family: 'Roboto', sans-serif;
+}
+.tableController{
+    text-align-last: auto;
+}
+#buttonUser{
+    width: 202px;
+}
+#input3Select{
+    width: 80px;
+}
+/* i to drugie js mmm https://imgur.com/a/4IHowEM dodawanie userów do tabeli*/
+/* // zeby najezdzajac na przycisk zmienial kolor hover */
+/* zrobienie warunku -> jezeli w jednym z pól nie ma nic -> make this button inactive */
+
