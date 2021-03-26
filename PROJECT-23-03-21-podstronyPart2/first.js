@@ -5,7 +5,7 @@ function a(){
     newTrElement.className = "newTrElement"
     getTBody.appendChild(newTrElement)
     var getTrElementByClassName = document.getElementsByClassName("newTrElement")
-    console.log(getTrElementByClassName.length)//debug ilosci elementow o id newTrElement(tagi <tr>)
+    // console.log(getTrElementByClassName.length)//debug ilosci elementow o id newTrElement(tagi <tr>)
     var getTrElementLenght = getTrElementByClassName.length
     var getTrElement = document.getElementsByTagName("tr")[getTrElementLenght]
 
@@ -18,28 +18,56 @@ function a(){
     //imie
     var newTdElement1 = document.createElement("td")
     var getInput0 = document.getElementById("input0")
-    newTdElement1.innerHTML = getInput0.value
+    //randomizacja
+    var getNameRandomize = document.getElementById("randomizeName")
+    if (getNameRandomize.value = true){
+        newTdElement1.innerHTML = randName()
+    }else{
+        newTdElement1.innerHTML = getInput0.value
+    }
     //nazwisko
     var newTdElement2 = document.createElement("td")
     var getInput1 = document.getElementById("input1")
-    newTdElement2.innerHTML = getInput1.value
+    //randomizacja
+    var getSurnameRandomize = document.getElementById("randomizeSurname")
+    if (getSurnameRandomize.value = true){
+        newTdElement2.innerHTML = randSurname()
+
+    }else{
+        newTdElement2.innerHTML = getInput1.value
+    }
     //wiek
     var newTdElement3 = document.createElement("td")
     var getInput2 = document.getElementById("input2")
-    newTdElement3.innerHTML = getInput2.value
+    //randomizacja
+    var getWiekRadomize = document.getElementById("randomizeAge")
+    if (getWiekRadomize.value = true){
+        newTdElement3.innerHTML = randAge()
+    }else{
+        newTdElement3.innerHTML = getInput4.value
+    }
+
     //dostepnosc
     var newTdElement4 = document.createElement("td")
     var getInput3 = document.getElementById("input3Select")
-    newTdElement4.innerHTML = getInput3.value
+        newTdElement4.innerHTML = getInput3.value
     //sprawdza czy pola nie sa puste i usuwa niepotrzebne <tr>
     if(getInput0.value != "" && getInput1.value != "" && getInput2.value != "" ){
         getTBody.appendChild(newTrElement)
     }else{
         getTBody.removeChild(newTrElement)
     }
-    if(getInput0.value == "" || getInput1.value == "" || getInput2.value == "" ){
-        alert("sprawdź pola i dodaj użytkowników jeszcze raz!")
+    //if tr > 22 - nie generuj wiecej
+    if(!(getTrElementLenght > 22)){
+        getTBody.appendChild(newTrElement)
+    }else{
+        getTBody.removeChild(newTrElement)
+        alert("Lista jest za duża. Usuń już istniejących użytkowników aby dodać nowych")
     }
+    
+    // if(getInput0.value == "" || getInput1.value == "" || getInput2.value == "" ){
+    //     alert("sprawdź pola i dodaj użytkowników jeszcze raz!")
+    // }
     getTrElement.appendChild(newTdElement5)//id
     getTrElement.appendChild(newTdElement1)//imie
     getTrElement.appendChild(newTdElement2)//nazwisko
@@ -65,12 +93,26 @@ function b(){
 }
 
 // usuwanie userow przez button przy kazdym userze
-function c(){
-    var button = document.getElementById("deleteButton")[0];
-    button.onclick = function() {
-        console.log("asd")
-        console.log("test")
-    }
+
+
+
+// randomizacja imion
+function randName(){
+    
+    var NameArr = ["Ilona","Liliana","Ewa","Jadwiga","Teresa","Magda","Danuta","Bogda","Felicja","Alice"]
+    var rand = Math.floor(Math.random() * NameArr.length)
+    return NameArr[rand]
 }
+function randSurname(){
+    
+    var NameArr = ["Kowalczyk","Stępień","Sadowska","Wójcik","Stępień","Włodarczyk","Pietrzak","Kołodziej","Adamska","Czarnecka"]
+    var rand = Math.floor(Math.random() * NameArr.length)
+    return NameArr[rand]
+}
+function randAge(){
+     var rand = 18 + Math.floor(Math.random() * 60)
+     return rand;
+}
+
 
 
