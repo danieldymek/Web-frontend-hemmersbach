@@ -9,25 +9,43 @@
       rel="stylesheet">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <div class=main ></div>
-    <div class=header>
+    <div class=globalUzytkownicy >
+        <div class=header>
         
-        header
+        <span class="material-icons" >
+            emoji_people
+            </span>
         
 
     </div>
     <div class=leftBar>
-        <p>leftBar</p>
         
-        
-                <span class="material-icons">
-                    home
-                    </span>
-                <a href="index.html">Strona glowna</a><br>
+           <br>
+        <button class=homeButton onclick=navHome()><span><span class="material-icons">
+            home
+            </span></span></button>
+            <br>
+            <br>
+            <button class=userButton onclick=navUsers()><span><span class="material-icons">
+                emoji_people
+                </span></span></button>
+                <br>
+                <br>
+        <button class=galleryButton onclick=navGal()><span><span class="material-icons">
+            camera_alt
+            </span></span></button>
+            <br>
+            <br>
+        <button class=contactButton onclick=navContact()><span><span class="material-icons">
+            perm_phone_msg
+            </span></span></button>
+                
+                <!-- <a href="index.html">Strona glowna</a><br>
                 <span class="material-icons">
                     emoji_people
                     </span>
@@ -42,7 +60,7 @@
                 <span class="material-icons">
                     perm_phone_msg
                     </span>
-                <a href="indexKontakt.html">Kontakt</a><br>
+                <a href="indexKontakt.html">Kontakt</a><br> -->
 
     </div>
     <div class=midContent>
@@ -119,6 +137,7 @@
 
         
     </div>
-    </div>
+    </div></div>
+    
 </body>
 </html>

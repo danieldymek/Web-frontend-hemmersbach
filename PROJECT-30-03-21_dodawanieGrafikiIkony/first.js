@@ -114,5 +114,15 @@ function randAge(){
      return rand;
 }
 
-
-
+function navHome(){
+    window.location.href = 'index.html'
+}
+function navUsers(){
+    window.location.href = 'indexUZYTKONICY.html'
+}
+function navGal(){
+    window.location.href = 'indexGaleria.html'
+}
+function navContact(){
+    window.location.href = 'indexKontakt.html'
+}
