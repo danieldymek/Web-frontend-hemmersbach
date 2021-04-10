@@ -9,9 +9,7 @@ function a(){
     var getTrElementLenght = getTrElementByClassName.length
     var getTrElement = document.getElementsByTagName("tr")[getTrElementLenght]
 
-    var deleteButton = document.createElement("button")
-    deleteButton.innerHTML = "X"
-    deleteButton.className = "deleteButton"
+    
     // id
     var newTdElement5 = document.createElement("td")
     newTdElement5.innerHTML = getTrElementLenght - 1
@@ -126,3 +124,4 @@ function navGal(){
 function navContact(){
     window.location.href = 'indexKontakt.html'
 }
+
