@@ -1,0 +1,203 @@
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: #3D1255;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+.leftBar{
+    width: 20%;
+    height: 700px;
+    background-color: #582A72;
+    float:left;
+    font-size: 27.5px;
+    padding-top: 0px;
+    margin-top: 0px;
+    /* text-align-last: center; */
+    
+
+
+}
+.midContent{
+    width: 60%;
+    height: 700px;
+    background-color: #764B8E;
+    float:left;
+    text-align: center;
+
+    
+
+
+}
+.rightBar{
+    width: 20%;
+    height: 700px;
+    background-color: #582A72;
+    float:left;
+    text-align: center;
+    
+
+
+}
+ td {
+    border: 2px solid rgba(0, 0, 0, 0.534);
+  }
+td {
+    color:rgba(255, 255, 255, 0.568)
+  }
+th {
+    color:rgba(255, 255, 255, 0.568)
+  }
+  .tableDiv{
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      text-align-last: center;
+      background-color: rgba(108, 11, 236, 0.349);
+      border: 1px solid;
+  }
+
+#kontakty2{
+    font-family: 'Roboto', sans-serif;
+}
+.tableController{
+    text-align-last: auto;
+}
+#buttonUser{
+    width: 202px;
+}
+#input3Select{
+    width: 80px;
+}
+
+
+
+
+.globalUzytkownicy{
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.749);
+}
+.globalKontakty{
+    color: rgba(255, 255, 255, 0.749);
+    font-family: 'Roboto', sans-serif;
+
+}
+.globalGaleria{
+    color: rgba(255, 255, 255, 0.749);
+    font-family: 'Roboto', sans-serif;
+
+}
+.globalHome{
+    color: rgba(255, 255, 255, 0.749);
+    font-family: 'Roboto', sans-serif;
+}
+/* //zmien menu napisy zeby bylo turbo czytelnie i kolorystyka strony z https://color.adobe.com/pl/create/color-wheel*/
+
+.homeButton, .userButton, .contactButton, .galleryButton  {
+    
+
+    
+}
+.homeButton, .userButton, .contactButton, .galleryButton {
+    transition-duration: 0.7s;
+    
+    width:50%;
+    height: 20%;
+    margin-top: 10px;
+    margin-left: 25%;
+    margin-bottom: 10px;
+    border-style: dashed;
+    border-color: #9F5B70;
+    background-color: #582A72;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .homeButton:hover, .userButton:hover, .contactButton:hover, .galleryButton:hover {
+    background-color: #260339;
+    color:white;
+
+  }
+.homeButton:hover span {display:none}
+.userButton:hover span {display:none}
+.contactButton:hover span {display:none}
+.galleryButton:hover span {display:none}
+.homeButton:hover:before {
+    
+    text-align-last: center;
+    font-size: 26px;
+    padding: 20px;
+    content:".home()";
+    
+
+}
+.userButton:hover:before {
+    
+    text-align-last: center;
+    font-size: 26px;
+    content:".users()";
+
+    
+
+}
+.contactButton:hover:before {
+    
+    text-align-last: center;
+    font-size: 26px;
+    content:".contact()";
+    
+
+}
+.galleryButton:hover:before {
+    
+    text-align-last: center;
+    font-size: 26px;
+    content:".gallery()";
+    
+
+}
+.tableController{
+    color:white;
+    font-weight:bold;
+}
+#input0, #input1, #input2, #randomizeName, #randomizeSurname, #randomizeAge, #input3Select, #buttonUser, #userDeletorInput {
+    background-color: #764B8E;
+    text-align-last: center;
+    width: 75%;
+    
+    border: 1px solid black;
+  }
+  #imie{
+    width: 50%;
+    height: 70px;
+    float:right;
+  }
+  #nazwisko{
+    width: 50%;
+    height: 70px;
+    float:right;
+
+}
+#wiek{
+    width: 50%;
+    height: 70px;
+}
+#dostepnosc{
+    float:right;
+    width: 50%;
+    height: 70px;
+}
+.headerIcon{
+    height: 100%;
+    width: 24px;
+    text-align-last: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
