@@ -212,3 +212,24 @@ body{
     justify-content: center;
     align-items: center;
 }
+.mid-image{
+    width: 50%;
+    height: 50%;
+    margin-left: 5px;
+    float: right;
+
+}
+.midUnderHeaderText{
+    font-weight: bold;
+}
+#articleSize{
+    width: 90%;
+    text-align:justify;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+.midHeader{
+    text-align-last: center;
+}
