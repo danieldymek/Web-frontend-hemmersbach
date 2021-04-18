@@ -145,3 +145,6 @@ function d(){
     var getTrElementsSize = document.getElementsByTagName("tr")
     console.log(getTrelements.length);
 }
+function btnalert(){
+    alert("click")
+}
