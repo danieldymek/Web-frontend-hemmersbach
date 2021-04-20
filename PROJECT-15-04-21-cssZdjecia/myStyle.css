@@ -9,6 +9,10 @@
     
 
 }
+html{
+    transition: .5s;
+
+}
 .leftBar{
     width: 20%;
     height: 700px;
@@ -228,16 +232,19 @@ body{
     margin-left: 5px;
     float: right;
     position: absolute;
-    margin-top: 100px;
-    margin-left: 620px;
+    margin-top: 5%;
+    margin-left: 60%;
     width: 100px;
     height: 50px;
-    background-color: red;
-    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
     font-family: 'Roboto', sans-serif;
     border-radius: 30%;
-    border-color:rgba(0, 0, 0, 0.534);
+    border-color:rgba(0, 0, 0, 0);
     transition: 0.5s;
+    -webkit-text-stroke: 1px red;
+
+    
 
 }
 .midUnderHeaderText{
@@ -255,36 +262,39 @@ body{
     text-align-last: center;
 }
 .btn:hover{
-    transition: 0.5s;
     position: absolute;
-    margin-top: 100px;
-    margin-left: 620px;
+    margin-top: 5%;
+    margin-left: 60%;
+
     width: 100px;
     height: 50px;
-    background-color: red;
-    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
     font-family: 'Roboto', sans-serif;
     border-radius: 30%;
-    border-color:rgba(0, 0, 0, 0.534);
+    border-color:rgba(0, 0, 0, 0);
     outline:none;
-    transition: 1s;
+    -webkit-text-stroke: 1px red;
+
 
 }
 
 .btn{
     position: absolute;
-    margin-top: 100px;
-    margin-left: 620px;
+    margin-top: 5%;
+    margin-left: 50%;
+
     width: 0px;
     height: 0px;
     color: rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
     border-color: rgba(0, 0, 0, 0);
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 120px;
     outline:none;
-
+    transition: .1s;
 }
+
 
 
 
