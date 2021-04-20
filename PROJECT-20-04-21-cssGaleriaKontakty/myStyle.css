@@ -180,14 +180,14 @@ th {
     color:white;
     font-style: bolder;
     border: 1px solid black;
-  }
-  #imie{
+}
+#imie{
     width: 50%;
     height: 70px;
     float:right;
     color:white;
-  }
-  #nazwisko{
+}
+#nazwisko{
     width: 50%;
     height: 70px;
     float:right;
@@ -296,11 +296,11 @@ body{
     width: 600px;
     height: 200px;
     background-color: #582A72;
-    border: none;
+    border: 1px solid black;
     outline: none;
     resize: none;
     color: white;
-    placeho
+    border-radius: 3%;
 }
 .getSupportButton0{
     background-color: #28B536;
@@ -314,6 +314,8 @@ body{
     cursor: pointer;
     align-items: center;
     box-shadow: 3px 3px 3px black;
+    
+
 }
 
 .getSupportButton0:hover{
@@ -327,7 +329,7 @@ body{
     justify-content: center;
     cursor: pointer;
     box-shadow: 3px 3px 3px black;
-    transition: 1s;
+    transition: .5s;
     align-items: center;
 
 }
@@ -343,7 +345,7 @@ body{
     justify-content: center;
     cursor: pointer;
     box-shadow: 3px 3px 3px black;
-    transition: 1s;
+    transition: .5s;
     align-items: center;
 
 }
@@ -374,7 +376,7 @@ body{
     justify-content: center;
     cursor: pointer;
     box-shadow: 3px 3px 3px black;
-    transition: 1s;
+    transition: .5s;
     align-items: center;
 
 }
@@ -390,7 +392,7 @@ body{
     justify-content: center;
     cursor: pointer;
     box-shadow: 3px 3px 3px black;
-    transition: 1s;
+    transition: .5s;
     align-items: center;
 }
 .contactDiv{
@@ -414,4 +416,33 @@ body{
   /* jezeli w tekscie nie bedzie na textarea nic wpisane przycisk ma byc wyszarzaly i nieklikalny javascript, popracowac nad wizytówką o tyle ile się da */
 
 
+
+.getSupportButton0:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #9c8686;
+  color: #666666;
+  cursor: no-drop;
+}
+#contactEmail{
+    background-color: #582A72;
+    border-radius: 3%;
+    border: 1px solid black;
+    height: 20px;
+
+}
+#contactName{
+    background-color: #582A72;
+    border-radius: 3%;
+    border: 1px solid black;
+    height: 20px;
+
+}
+#contactLabel0{
+    font-weight: bolder;
+}
+#contactLabel1{
+    font-weight: bolder;
+    
+}
 

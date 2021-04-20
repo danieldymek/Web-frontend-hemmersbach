@@ -58,12 +58,19 @@
             <a href="https://portal.librus.pl/rodzina" target="_blank">strona internetowa (KLIK)</a>
         </div>
             <h1>Contact Us!</h1>
+            <label for="name" id="contactLabel0">Nick: </label>
+            <input type="text" id="contactName" name="name" placeholder="Nickname"/>
+
+            <label for="email" id="contactLabel1">Email: </label>
+            <input type="text" id="contactEmail" name="email" placeholder="E-mail"/>
+            <br>
+            <br>
             <textarea class="getSupportInput" placeholder="Share with us"></textarea>
             <br>
             <br>
             <br>
-            <button class="getSupportButton1">cancel</button>
-            <button class="getSupportButton0">send</button>
+            <button class="getSupportButton1" onclick="deleteFormData()">cancel</button>
+            <button class="getSupportButton0" onclick="dataSender()">send</button>
 
             
         

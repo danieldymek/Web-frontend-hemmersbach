@@ -148,3 +148,45 @@ function d(){
 function btnalert(){
     alert("click")
 }
+
+function checkIfFormNotEmpty(){
+var getFormMessage = document.getElementsByClassName("getSupportInput")[0]
+var getSubmitButton = document.getElementsByClassName("getSupportButton0")[0]
+var getFormName = document.getElementById("contactName")
+var getFormEmail = document.getElementById("contactEmail")
+if(getFormMessage.value == "" || getFormName.value == "" || getFormEmail.value == ""){
+    getSubmitButton.disabled = true
+}else{
+    getSubmitButton.disabled = false
+}
+
+
+
+}
+setInterval(checkIfFormNotEmpty, 200);
+function dataSender(){
+    var getFormName = document.getElementById("contactName")
+    var getFormEmail = document.getElementById("contactEmail")
+    var getFormMessage = document.getElementsByClassName("getSupportInput")[0]
+    var getSubmitButton = document.getElementsByClassName("getSupportButton0")[0]
+    if(getSubmitButton.disabled == false){
+        console.log("Form has been sent...")
+        console.log("Sender: " + getFormName.value + ", Senders email: " + getFormEmail.value )
+        console.log("senders message: " + getFormMessage.value)
+    }
+    if(getFormName.value == "" || getFormEmail.value == ""){
+        getSubmitButton.disabled = true
+    }else{
+        getSubmitButton.disabled = false
+    }
+}
+function deleteFormData(){
+    var getCancelButton = document.getElementsByClassName("getSupportButton1")[0]
+    var getFormName = document.getElementById("contactName")
+    var getFormEmail = document.getElementById("contactEmail")
+    var getFormMessage = document.getElementsByClassName("getSupportInput")[0]
+    getFormEmail.value = ""
+    getFormMessage.value = ""
+    getFormName.value = ""
+
+}
