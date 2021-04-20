@@ -104,11 +104,7 @@ th {
 }
 /* //zmien menu napisy zeby bylo turbo czytelnie i kolorystyka strony z https://color.adobe.com/pl/create/color-wheel*/
 
-.homeButton, .userButton, .contactButton, .galleryButton  {
-    
 
-    
-}
 .homeButton, .userButton, .contactButton, .galleryButton {
     transition-duration: 0.7s;
     
@@ -129,6 +125,7 @@ th {
   .homeButton:hover, .userButton:hover, .contactButton:hover, .galleryButton:hover {
     background-color: #260339;
     color:white;
+    
 
   }
 .homeButton:hover span {display:none}
