@@ -296,7 +296,7 @@ body{
     width: 600px;
     height: 200px;
     background-color: #582A72;
-    border: 1px solid black;
+    border: 2px solid #3D1255;
     outline: none;
     resize: none;
     color: white;
@@ -314,6 +314,8 @@ body{
     cursor: pointer;
     align-items: center;
     box-shadow: 3px 3px 3px black;
+    transition: 0.5;
+
     
 
 }
@@ -402,16 +404,19 @@ body{
     height: 30%;
     width: 30%;
     margin: auto;
+    padding: auto;
     color:black;
     background-color: #F5E5AB;
     box-shadow: 15px 15px 15px black;
     border-radius: 20%;
     font-weight: bolder;
-
+    transition: 0.5s;
+    border: 5px solid #e6c44d
 }
 ::placeholder { 
     color: white;
     opacity: .5; 
+    transition: 1s;
   }
   /* jezeli w tekscie nie bedzie na textarea nic wpisane przycisk ma byc wyszarzaly i nieklikalny javascript, popracowac nad wizytówką o tyle ile się da */
 
@@ -423,18 +428,20 @@ button[disabled]{
   background-color: #9c8686;
   color: #666666;
   cursor: no-drop;
+  transition: 0.5;
 }
 #contactEmail{
     background-color: #582A72;
     border-radius: 3%;
-    border: 1px solid black;
+    border: 2px solid #3D1255;
     height: 20px;
+    
 
 }
 #contactName{
     background-color: #582A72;
     border-radius: 3%;
-    border: 1px solid black;
+    border: 2px solid #3D1255;
     height: 20px;
 
 }

@@ -169,10 +169,13 @@ function dataSender(){
     var getFormEmail = document.getElementById("contactEmail")
     var getFormMessage = document.getElementsByClassName("getSupportInput")[0]
     var getSubmitButton = document.getElementsByClassName("getSupportButton0")[0]
-    if(getSubmitButton.disabled == false){
-        console.log("Form has been sent...")
-        console.log("Sender: " + getFormName.value + ", Senders email: " + getFormEmail.value )
-        console.log("senders message: " + getFormMessage.value)
+    if(!(getFormName.value == ""|| getFormMessage.value == "" ||getFormEmail.value == "" )){
+        if(getSubmitButton.disabled == false){
+            console.log("Form has been sent...")
+            console.log("Sender: " + getFormName.value + ", Senders email: " + getFormEmail.value )
+            console.log("senders message: " + getFormMessage.value)
+        }
+        
     }
     if(getFormName.value == "" || getFormEmail.value == ""){
         getSubmitButton.disabled = true
