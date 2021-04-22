@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
     <div class=globalGaleria >
@@ -49,10 +50,60 @@
             
         </div>
         <div class=midContent>
-            Galeria
+            <div id="galleryThing" ></div>
+            <div id="galleryPart1" >
+                <div class="stickynote" >
+                    <!-- onmousemove="myMoveFunction()" -->
+                    <img class="galImage" src="jpgs/1.jpg" alt="1"  value=1>
+                    <p class="underPhotoText">test</p>
+                </div>
+                <div class="stickynote" >
+                    <img class="galImage" src="jpgs/2.jpg" alt="2" >
+                    <p class="underPhotoText">test</p>
+                </div>
+                <div class="stickynote">
+                    <img class="galImage" src="jpgs/3.jpg" alt="3" >
+                    <p class="underPhotoText">test</p>
+                </div>
+            </div>
+            <div id="galleryPart2" >
+                <div class="stickynote">
+                    <img class="galImage" src="jpgs/4.jpg" alt="4" >
+                    <p class="underPhotoText">test</p>
+                </div>
+                <div class="stickynote">
+                    <img class="galImage"src="jpgs/5.jpg" alt="5" >
+                    <p class="underPhotoText">test</p>
+                </div>
+                <div class="stickynote">
+                    <img class="galImage" src="jpgs/6.jpg" alt="6" >
+                    <p class="underPhotoText">test</p>
+                </div>
+            </div>    
+            <div id="galleryPart3" >
+                <div class="stickynote">
+                    <img class="galImage" src="jpgs/7.jpg" alt="7" >
+                    <p class="underPhotoText">test</p>
+                </div>
+                <div class="stickynote">
+                    <img class="galImage" src="jpgs/8.jpg" alt="8" >
+                    <p class="underPhotoText">test</p>
+                </div>
+                <div class="stickynote">
+                    <img class="galImage" src="jpgs/9.jpg" alt="9" >
+                    <p class="underPhotoText">test</p>
+                </div>
+            </div>
+
+
+            
+
         </div>
         <div class=rightBar>
             rightBar
+            <button onclick="GalleryPopup(0)">invistoggler</button>
+            <button onclick="putExistingElementInsideInvis()">putimage</button>
+
         </div>
         </div>
     </div>

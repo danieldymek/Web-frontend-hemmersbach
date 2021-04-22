@@ -32,7 +32,7 @@ html{
     background-color: #764B8E;
     float:left;
     text-align: center;
-    background-image: url("https://ak.picdn.net/shutterstock/videos/1033186691/thumb/1.jpg");
+    /* background-image: url("https://ak.picdn.net/shutterstock/videos/1033186691/thumb/1.jpg"); */
     background-size: 200%;
 
     
@@ -407,7 +407,6 @@ body{
     box-shadow: 15px 15px 15px black;
     border-radius: 20%;
     font-weight: bolder;
-    transition: 0.5s;
     border: 5px solid #e6c44d
 }
 ::placeholder { 
@@ -450,3 +449,69 @@ button[disabled]{
     
 }
 
+.stickynote{
+    width: 150px;
+    height: 170px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 3px black;
+    background-color: #F5E5AB;
+}
+.stickynote:active{
+    width: 600px;
+    height: 600px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    background-color: #F5E5AB;
+    position: absolute;
+
+}
+
+.galImage{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+
+}
+.galImage:hover {
+    width: 150px;
+    height: 150px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.galImage:active{
+    width: 500px;
+    height: 500px;
+    opacity: 0.8;
+    border: 3px solid black;
+
+}
+
+
+#galleryPart1, #galleryPart2, #galleryPart3{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+
+.underPhotoText{
+    color:black;
+    font-weight: bolder;
+    margin: 0px;
+}
+#galleryThing{
+    visibility: hidden;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 660px;
+    width: 1102px;
+    background-color: black;
+    position: absolute;
+
+}

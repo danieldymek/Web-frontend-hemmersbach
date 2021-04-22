@@ -160,8 +160,11 @@ if(getFormMessage.value == "" || getFormName.value == "" || getFormEmail.value =
     getSubmitButton.disabled = false
 }
 }
-//its checking every 200 ticks
-setInterval(checkIfFormNotEmpty, 200);
+//verifying if user is in indexKontakt.html and run textarea checker every 200 ticks
+if(window.location.href == "file:///D:/OFFICE%20DATA/HTML/Web%20Frontend%20HemmersbachPoland/PROJECT-20-04-21-cssGaleriaKontakty/indexKontakt.html"){
+    setInterval(checkIfFormNotEmpty, 200);
+
+}
 
 //grabbing data from email, name and message and logging it to console
 function dataSender(){
@@ -181,12 +184,48 @@ function dataSender(){
 }
 // deleting already written content using cancel button
 function deleteFormData(){
-    var getCancelButton = document.getElementsByClassName("getSupportButton1")[0]
+
     var getFormName = document.getElementById("contactName")
     var getFormEmail = document.getElementById("contactEmail")
     var getFormMessage = document.getElementsByClassName("getSupportInput")[0]
     getFormEmail.value = ""
     getFormMessage.value = ""
     getFormName.value = ""
+
+}
+function GalleryPopup(index){
+
+    var gal = document.getElementById("galleryThing");
+
+    if(gal.style.visibility == "visible"){
+        gal.style.visibility = "hidden"
+    }else if(!(gal.style.visibility == "visible")){
+        gal.style.visibility = "visible"
+    }
+    var photo1 = document.getElementsByClassName("galImage")[index];
+    var getDiv = document.getElementById("galleryThing");
+    var getPhoto1Text = document.getElementsByClassName("underPhotoText")[index];
+    var clonePhoto1 = photo1.cloneNode(true)
+    clonePhoto1.className = "galImageNew"
+    var clonePhoto1Text = getPhoto1Text.cloneNode(true)
+    if(document.getElementsByClassName("galImageNew").length >= 1){
+
+        getDiv.removeChild(clonePhoto1)
+        getDiv.removeChild(clonePhoto1Text)
+    }else{
+        getDiv.appendChild(clonePhoto1)
+        getDiv.appendChild(clonePhoto1Text)
+    }
+
+    clonePhoto1.style.height = "500px"
+    clonePhoto1.style.width = "500px"
+    clonePhoto1.style.paddingTop = "70px"
+    clonePhoto1Text.style.color = "white"
+    clonePhoto1Text.style.fontSize = "40px"
+    
+}
+
+var stickynote = document.getElementsByClassName("stickynote")[0]
+stickynote.onclick = function(){
 
 }
