@@ -127,7 +127,7 @@ function randAge(){
      var rand = 18 + Math.floor(Math.random() * 60)
      return rand;
 }
-
+//navigation
 function navHome(){
     window.location.href = 'index.html'
 }
@@ -148,7 +148,7 @@ function d(){
 function btnalert(){
     alert("click")
 }
-
+// checker if form is not empty: email, name and message
 function checkIfFormNotEmpty(){
 var getFormMessage = document.getElementsByClassName("getSupportInput")[0]
 var getSubmitButton = document.getElementsByClassName("getSupportButton0")[0]
@@ -159,11 +159,11 @@ if(getFormMessage.value == "" || getFormName.value == "" || getFormEmail.value =
 }else{
     getSubmitButton.disabled = false
 }
-
-
-
 }
+//its checking every 200 ticks
 setInterval(checkIfFormNotEmpty, 200);
+
+//grabbing data from email, name and message and logging it to console
 function dataSender(){
     var getFormName = document.getElementById("contactName")
     var getFormEmail = document.getElementById("contactEmail")
@@ -177,12 +177,9 @@ function dataSender(){
         }
         
     }
-    if(getFormName.value == "" || getFormEmail.value == ""){
-        getSubmitButton.disabled = true
-    }else{
-        getSubmitButton.disabled = false
-    }
+
 }
+// deleting already written content using cancel button
 function deleteFormData(){
     var getCancelButton = document.getElementsByClassName("getSupportButton1")[0]
     var getFormName = document.getElementById("contactName")
