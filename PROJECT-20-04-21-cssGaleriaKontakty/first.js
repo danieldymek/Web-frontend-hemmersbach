@@ -193,6 +193,7 @@ function deleteFormData(){
     getFormName.value = ""
 
 }
+// show image in theatre mode
 function GalleryPopup(index){
 
     var gal = document.getElementById("galleryThing");
@@ -208,10 +209,10 @@ function GalleryPopup(index){
     var clonePhoto1 = photo1.cloneNode(true)
     clonePhoto1.className = "galImageNew"
     var clonePhoto1Text = getPhoto1Text.cloneNode(true)
-    if(document.getElementsByClassName("galImageNew").length >= 1){
+    if(document.getElementsByClassName("galImageNew").length > 1){
 
-        getDiv.removeChild(clonePhoto1)
-        getDiv.removeChild(clonePhoto1Text)
+        // getDiv.removeChild(clonePhoto1)
+        // getDiv.removeChild(clonePhoto1Text)
     }else{
         getDiv.appendChild(clonePhoto1)
         getDiv.appendChild(clonePhoto1Text)
@@ -224,8 +225,57 @@ function GalleryPopup(index){
     clonePhoto1Text.style.fontSize = "40px"
     
 }
-
+// reacting to div onclick and showing up image view method
 var stickynote = document.getElementsByClassName("stickynote")[0]
 stickynote.onclick = function(){
+    GalleryPopup(0)
+}
+var stickynote = document.getElementsByClassName("stickynote")[1]
+stickynote.onclick = function(){
+    GalleryPopup(1)
+}
+var stickynote = document.getElementsByClassName("stickynote")[2]
+stickynote.onclick = function(){
+    GalleryPopup(2)
+}
+var stickynote = document.getElementsByClassName("stickynote")[3]
+stickynote.onclick = function(){
+    GalleryPopup(3)
+}
+var stickynote = document.getElementsByClassName("stickynote")[4]
+stickynote.onclick = function(){
+    GalleryPopup(4)
+}
+var stickynote = document.getElementsByClassName("stickynote")[5]
+stickynote.onclick = function(){
+    GalleryPopup(5)
+}
+var stickynote = document.getElementsByClassName("stickynote")[6]
+stickynote.onclick = function(){
+    GalleryPopup(6)
+}
+var stickynote = document.getElementsByClassName("stickynote")[7]
+stickynote.onclick = function(){
+    GalleryPopup(7)
+}
+var stickynote = document.getElementsByClassName("stickynote")[8]
+stickynote.onclick = function(){
+    GalleryPopup(8)
+}
+function GalleryToggler(){
+    var gal = document.getElementById("galleryThing");
+
+    if(gal.style.visibility == "visible"){
+        gal.style.visibility = "hidden"
+    }else if(!(gal.style.visibility == "visible")){
+        gal.style.visibility = "visible"
+    }
+
+    for(var i = 0; i < 9; i++){
+        var getNewImage = document.getElementsByClassName("galImageNew")[i]
+        var getNewText = document.getElementsByClassName("underPhotoText")[i]
+            gal.removeChild(getNewImage)
+            gal.removeChild(getNewText)
+    }
 
 }

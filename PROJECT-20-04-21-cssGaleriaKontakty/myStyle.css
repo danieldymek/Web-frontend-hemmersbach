@@ -458,18 +458,21 @@ button[disabled]{
     padding: 10px;
     box-shadow: 3px 3px 3px black;
     background-color: #F5E5AB;
-}
-.stickynote:active{
-    width: 600px;
-    height: 600px;
-    padding-top: 50px;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 50px;
-    background-color: #F5E5AB;
-    position: absolute;
 
 }
+/* .stickynote:hover{
+    width: 150px;
+    height: 170px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 3px black;
+    background-color: #F5E5AB;
+
+    opacity: 0.8;
+    transition: 0.3s; */
+/* } */
 
 .galImage{
     width: 150px;
@@ -481,13 +484,13 @@ button[disabled]{
     width: 150px;
     height: 150px;
     opacity: 0.8;
-    transition: 0.3s;
+
+
 }
 .galImage:active{
-    width: 500px;
-    height: 500px;
-    opacity: 0.8;
-    border: 3px solid black;
+    width: 150px;
+    height: 150px;
+    visibility: hidden;
 
 }
 
@@ -513,5 +516,38 @@ button[disabled]{
     width: 1102px;
     background-color: black;
     position: absolute;
-
+    border-radius: 5% 5%;
+    border: 2px solid white;
+}
+.imageViewExitButton{
+    width: 55px;
+    height: 55px;
+    position:absolute;
+    margin-left: 68%;
+    font-size: 40px;
+    border-radius: 50%;
+    outline:none;
+    background: #B51F19;
+}
+.imageViewExitButton:hover{
+    width: 55px;
+    height: 55px;
+    position:absolute;
+    margin-left: 68%;
+    font-size: 40px;
+    border-radius: 50%;
+    outline:none;
+    background-color: #F52922;
+    transition: 0.2s;
+}
+.imageViewExitButton:active{
+    width: 55px;
+    height: 55px;
+    position:absolute;
+    margin-left: 68%;
+    font-size: 40px;
+    border-radius: 50%;
+    outline:none;
+    background-color: #7A1411;
+    transition: 0.2s;
 }
