@@ -211,8 +211,7 @@ function GalleryPopup(index){
     var clonePhoto1Text = getPhoto1Text.cloneNode(true)
     if(document.getElementsByClassName("galImageNew").length > 1){
 
-        // getDiv.removeChild(clonePhoto1)
-        // getDiv.removeChild(clonePhoto1Text)
+
     }else{
         getDiv.appendChild(clonePhoto1)
         getDiv.appendChild(clonePhoto1Text)
@@ -262,6 +261,7 @@ var stickynote = document.getElementsByClassName("stickynote")[8]
 stickynote.onclick = function(){
     GalleryPopup(8)
 }
+//gallery toggler (button). safety feature if there are any appended elements, remove them making space for new elements after image is clicked
 function GalleryToggler(){
     var gal = document.getElementById("galleryThing");
 
