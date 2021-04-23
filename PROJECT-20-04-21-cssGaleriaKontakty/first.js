@@ -271,9 +271,9 @@ function GalleryToggler(){
         gal.style.visibility = "visible"
     }
 
-    for(var i = 0; i < 9; i++){
-        var getNewImage = document.getElementsByClassName("galImageNew")[i]
-        var getNewText = document.getElementsByClassName("underPhotoText")[i]
+    for(var i = 0; i < 1; i++){
+        var getNewImage = document.getElementsByClassName("galImageNew")[0]
+        var getNewText = document.getElementsByClassName("underPhotoText")[0]
             gal.removeChild(getNewImage)
             gal.removeChild(getNewText)
     }
