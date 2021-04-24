@@ -219,48 +219,53 @@ function GalleryPopup(index){
 
     clonePhoto1.style.height = "500px"
     clonePhoto1.style.width = "500px"
-    clonePhoto1.style.paddingTop = "70px"
+    clonePhoto1.style.marginTop = "70px"
+    clonePhoto1.style.borderRadius = "5%"
     clonePhoto1Text.style.color = "white"
     clonePhoto1Text.style.fontSize = "40px"
     
 }
 // reacting to div onclick and showing up image view method
-var stickynote = document.getElementsByClassName("stickynote")[0]
-stickynote.onclick = function(){
-    GalleryPopup(0)
+if(window.location.href == "file:///D:/OFFICE%20DATA/HTML/Web%20Frontend%20HemmersbachPoland/PROJECT-20-04-21-cssGaleriaKontakty/indexGaleria.html"){
+
+    var stickynote = document.getElementsByClassName("stickynote")[0]
+    stickynote.onclick = function(){
+        GalleryPopup(0)
+    }
+    var stickynote = document.getElementsByClassName("stickynote")[1]
+    stickynote.onclick = function(){
+        GalleryPopup(1)
+    }
+    var stickynote = document.getElementsByClassName("stickynote")[2]
+    stickynote.onclick = function(){
+        GalleryPopup(2)
+    }
+    var stickynote = document.getElementsByClassName("stickynote")[3]
+    stickynote.onclick = function(){
+        GalleryPopup(3)
+    }
+    var stickynote = document.getElementsByClassName("stickynote")[4]
+    stickynote.onclick = function(){
+        GalleryPopup(4)
+    }
+    var stickynote = document.getElementsByClassName("stickynote")[5]
+    stickynote.onclick = function(){
+        GalleryPopup(5)
+    }
+    var stickynote = document.getElementsByClassName("stickynote")[6]
+    stickynote.onclick = function(){
+        GalleryPopup(6)
+    }
+    var stickynote = document.getElementsByClassName("stickynote")[7]
+    stickynote.onclick = function(){
+        GalleryPopup(7)
+    }
+    var stickynote = document.getElementsByClassName("stickynote")[8]
+    stickynote.onclick = function(){
+        GalleryPopup(8)
+    }
 }
-var stickynote = document.getElementsByClassName("stickynote")[1]
-stickynote.onclick = function(){
-    GalleryPopup(1)
-}
-var stickynote = document.getElementsByClassName("stickynote")[2]
-stickynote.onclick = function(){
-    GalleryPopup(2)
-}
-var stickynote = document.getElementsByClassName("stickynote")[3]
-stickynote.onclick = function(){
-    GalleryPopup(3)
-}
-var stickynote = document.getElementsByClassName("stickynote")[4]
-stickynote.onclick = function(){
-    GalleryPopup(4)
-}
-var stickynote = document.getElementsByClassName("stickynote")[5]
-stickynote.onclick = function(){
-    GalleryPopup(5)
-}
-var stickynote = document.getElementsByClassName("stickynote")[6]
-stickynote.onclick = function(){
-    GalleryPopup(6)
-}
-var stickynote = document.getElementsByClassName("stickynote")[7]
-stickynote.onclick = function(){
-    GalleryPopup(7)
-}
-var stickynote = document.getElementsByClassName("stickynote")[8]
-stickynote.onclick = function(){
-    GalleryPopup(8)
-}
+
 //gallery toggler (button). safety feature if there are any appended elements, remove them making space for new elements after image is clicked
 function GalleryToggler(){
     var gal = document.getElementById("galleryThing");

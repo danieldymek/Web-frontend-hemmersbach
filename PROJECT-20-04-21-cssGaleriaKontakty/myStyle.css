@@ -478,6 +478,7 @@ button[disabled]{
     width: 150px;
     height: 150px;
     border: 1px solid black;
+    border-radius: 10%;
 
 }
 .galImage:hover {
@@ -538,7 +539,6 @@ button[disabled]{
     border-radius: 50%;
     outline:none;
     background-color: #F52922;
-    transition: 0.2s;
 }
 .imageViewExitButton:active{
     width: 55px;
@@ -549,5 +549,5 @@ button[disabled]{
     border-radius: 50%;
     outline:none;
     background-color: #7A1411;
-    transition: 0.2s;
+    transition: 0.5s;
 }
