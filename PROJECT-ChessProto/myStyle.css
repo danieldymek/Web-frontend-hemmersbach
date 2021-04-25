@@ -1,0 +1,23 @@
+html{
+    background-color: black;
+    color: white;
+}
+.module1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+td{
+    background-color: gray;
+}
+.button1{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+}
+.button2{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    margin-top: 200px;
+}
