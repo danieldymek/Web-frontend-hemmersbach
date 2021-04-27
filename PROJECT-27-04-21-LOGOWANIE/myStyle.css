@@ -615,13 +615,22 @@ button[disabled]{
     font-size: small;
 
 }
+/* anim */
+@keyframes example {
+    0%   {transform: scale(0.7);}
+    100% {transform: scale(1.1); }
+  }
 .greetingsText{
     visibility: hidden;
     font-size: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    animation-name: example;
+
 }
+/* anim end */
 .submitLoginBtn{
     background-color: #582A72;
     font-weight: bolder;

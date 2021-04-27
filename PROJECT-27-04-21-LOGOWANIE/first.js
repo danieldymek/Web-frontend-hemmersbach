@@ -359,7 +359,10 @@ function loginFunction(){
 
             stickynoteDiv.style.visibility = "hidden"
             greetingsText.style.visibility = "visible"
+            //anim
+            greetingsText.style.animationDuration = "5s"
             greetingsText.innerHTML = "Welcome, " + uzytkownicy[i].imie + " " + uzytkownicy[i].nazwisko + "\n Redirecting..."
+            
             setTimeout(() => {
             window.location.href = 'index.html'
                 
