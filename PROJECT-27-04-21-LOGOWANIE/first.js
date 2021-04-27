@@ -164,7 +164,7 @@ if(getFormMessage.value == "" || getFormName.value == "" || getFormEmail.value =
 }
 }
 //verifying if user is in indexKontakt.html and run textarea checker every 200 ticks
-if(window.location.href == "file:///D:/OFFICE%20DATA/HTML/Web%20Frontend%20HemmersbachPoland/PROJECT-20-04-21-cssGaleriaKontakty/indexKontakt.html"){
+if(window.location.href == "file:///D:/OFFICE%20DATA/HTML/Web%20Frontend%20HemmersbachPoland/PROJECT-27-04-21-LOGOWANIE/indexKontakt.html"){
     setInterval(checkIfFormNotEmpty, 200);
 
 }
@@ -229,7 +229,7 @@ function GalleryPopup(index){
     
 }
 // reacting to div onclick and showing up image view method
-if(window.location.href == "file:///D:/OFFICE%20DATA/HTML/Web%20Frontend%20HemmersbachPoland/PROJECT-20-04-21-cssGaleriaKontakty/indexGaleria.html"){
+if(window.location.href == "file:///D:/OFFICE%20DATA/HTML/Web%20Frontend%20HemmersbachPoland/PROJECT-27-04-21-LOGOWANIE/indexGaleria.html"){
 
     var stickynote = document.getElementsByClassName("stickynote")[0]
     stickynote.onclick = function(){
@@ -321,8 +321,14 @@ function loginFunction(){
         imie: "Michael",
         nazwisko: "Dumnas"
     }
+    var admin = {
+        login: "admin",
+        password: "admin",
+        imie: "daniel",
+        nazwisko: "dymek"
+    }
     //references...
-    var uzytkownicy = [user1, user2, user3, user4, user5]
+    var uzytkownicy = [user1, user2, user3, user4, user5,admin]
     var loginElemData = document.getElementsByClassName("login")[0].value
     var passwordElemData = document.getElementsByClassName("password")[0].value
     var postLoginPasswordElem = document.getElementsByClassName("postLoginPassword")[0]
@@ -353,7 +359,7 @@ function loginFunction(){
 
             stickynoteDiv.style.visibility = "hidden"
             greetingsText.style.visibility = "visible"
-            greetingsText.innerHTML = "Welcome, " + uzytkownicy[i].imie + "\n Redirecting..."
+            greetingsText.innerHTML = "Welcome, " + uzytkownicy[i].imie + " " + uzytkownicy[i].nazwisko + "\n Redirecting..."
             setTimeout(() => {
             window.location.href = 'index.html'
                 
