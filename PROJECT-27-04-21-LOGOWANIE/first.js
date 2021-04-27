@@ -287,43 +287,13 @@ function GalleryToggler(){
     }
 
 }
-var user1 = {
-    login: "Marek112",
-    password: "mareczek22",
-    imie: "Maciej",
-    nazwisko: "Kopyto"
-}
-var user2 = {
-    login: "MichalD",
-    password: "Douglas12",
-    imie: "Michal",
-    nazwisko: "Douglas"
-}
-var user3 = {
-    login: "KarMarn",
-    password: "Karolek12121",
-    imie: "Karol",
-    nazwisko: "Marnicki"
-}
-var user4 = {
-    login: "AriariMan",
-    password: "arianka12133",
-    imie: "Arianna",
-    nazwisko: "Mantel"
-}
-var user5 = {
-    login: "Michael",
-    password: "Dumnaski123",
-    imie: "Michael",
-    nazwisko: "Dumnas"
-}
-var uzytkownicy = [user1, user2, user3, user4, user5]
 
-//wprowadz kilku uzytkownikow. marta ma haslo marta123. jak bledne haslo lub login pokaz czerwony teskst pod inputem
+
+//login function, when login details are good, show welcome name, redirecting. if login details are not good, show text 'incorrect login details'
 function loginFunction(){
     var user1 = {
-        login: "a",
-        password: "b",
+        login: "Maciejoski12",
+        password: "borborboraba",
         imie: "Maciej",
         nazwisko: "Kopyto"
     }
@@ -351,32 +321,57 @@ function loginFunction(){
         imie: "Michael",
         nazwisko: "Dumnas"
     }
+    //references...
     var uzytkownicy = [user1, user2, user3, user4, user5]
     var loginElemData = document.getElementsByClassName("login")[0].value
     var passwordElemData = document.getElementsByClassName("password")[0].value
     var postLoginPasswordElem = document.getElementsByClassName("postLoginPassword")[0]
     var postLoginLoginElem = document.getElementsByClassName("postLoginLogin")[0]
-
+    var passwordElem = document.getElementsByClassName("password")[0]
+    var loginElem = document.getElementsByClassName("login")[0];
+    var loginAndPasswordLabel = document.getElementsByClassName("passLabel")
+    var loginButton = document.getElementsByClassName("submitLoginBtn")[0]
+    var stickynoteDiv = document.getElementsByClassName("loginThing")[0]
+    var greetingsText = document.getElementsByClassName("greetingsText")[0]
+    // for loop which is sorting thru uzytkownicy array and checking if input login&password is equal to any password from uzytkownicy array
+    //by default login succes is set to false
+    var loginSuccess = false;
+    //in addition this for loop is hiding loginDiv and making space for the greeting thing
     for (var i = 0; i < uzytkownicy.length; i++){
-        var loginSuccess = false;
         if(loginElemData == uzytkownicy[i].login && passwordElemData == uzytkownicy[i].password){
             console.log("Zalogowano poprawnie, " + uzytkownicy[i].imie)
-            // window.location.href = 'index.html'
-            postLoginLoginElem.value = "poprawny login"
-            postLoginPasswordElem.value = "poprawne hasło"
+            postLoginLoginElem.innerHTML = "correct login details"
+            postLoginPasswordElem.innerHTML = "correct login details"
             postLoginPasswordElem.style.visibility = "visible"
             postLoginPasswordElem.style.color = "green"
             postLoginLoginElem.style.visibility = "visible"
             postLoginLoginElem.style.color = "green"
 
+            //hiding elements and showing welcome user
+            postLoginPasswordElem.style.visibility = "hidden"
+            postLoginLoginElem.style.visibility = "hidden"
+
+            stickynoteDiv.style.visibility = "hidden"
+            greetingsText.style.visibility = "visible"
+            greetingsText.innerHTML = "Welcome, " + uzytkownicy[i].imie + "\n Redirecting..."
+            setTimeout(() => {
+            window.location.href = 'index.html'
+                
+            }, 2000);
+            //if login details are good, return loginSuccess true
            return loginSuccess = true;
+
+
         }
 
     }
+    //if above for loop did not give true, show this if statement. its also showing "incorrect details"
     if(loginSuccess == false){
         console.log("niezalogowano, zle haslo")
-        postLoginLoginElem.value = "niepoprawny login"
-        postLoginPasswordElem.value = "niepoprawne hasło"
+        postLoginLoginElem.innerHTML = "incorrect login details"
+        postLoginPasswordElem.innerHTML = "incorrect login details"
+        passwordElem.value = "";
+        loginElem.value = "";
         postLoginPasswordElem.style.visibility = "visible"
         postLoginPasswordElem.style.color = "red"
         postLoginLoginElem.style.visibility = "visible"

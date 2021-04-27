@@ -409,11 +409,11 @@ body{
     font-weight: bolder;
     border: 5px solid #e6c44d
 }
-::placeholder { 
+/* ::placeholder { 
     color: white;
     opacity: .5; 
     transition: 1s;
-  }
+  } */
   /* jezeli w tekscie nie bedzie na textarea nic wpisane przycisk ma byc wyszarzaly i nieklikalny javascript, popracowac nad wizytówką o tyle ile się da */
 
 
@@ -560,11 +560,15 @@ button[disabled]{
 }
 .login{
     width: 100px;
-    height: 20px
+    height: 20px;
+    background-color: #582A72;
 }
 .password{
     width: 100px;
-    height: 20px
+    height: 20px;
+    background-color: #582A72;
+
+
     
 }
 .loginThing{
@@ -576,10 +580,31 @@ button[disabled]{
         padding-right: 100px;
         padding-bottom: 100px;
         box-shadow: 3px 3px 3px black;
-        background-color: #F5E5AB;
+        background-color: #3D1255;
         color:black;
+
         
 }
+.loginThing::placeholder{
+    width: 150px;
+    height: 170px;
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    box-shadow: 3px 3px 3px black;
+    background-color: #F5E5AB;
+    color: black;
+    transition: 1s;
+
+    
+}
+.passLabel{
+    font-weight: bolder;
+    color: white;
+}
+
 .postLoginLogin{
     visibility: hidden;
     font-size: small;
@@ -589,4 +614,16 @@ button[disabled]{
     visibility: hidden;
     font-size: small;
 
+}
+.greetingsText{
+    visibility: hidden;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submitLoginBtn{
+    background-color: #582A72;
+    font-weight: bolder;
+    color: white;
 }
