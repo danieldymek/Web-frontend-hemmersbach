@@ -580,3 +580,13 @@ button[disabled]{
         color:black;
         
 }
+.postLoginLogin{
+    visibility: hidden;
+    font-size: small;
+
+}
+.postLoginPassword{
+    visibility: hidden;
+    font-size: small;
+
+}

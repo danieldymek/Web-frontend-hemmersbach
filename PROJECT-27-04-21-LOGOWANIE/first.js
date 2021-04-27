@@ -287,23 +287,102 @@ function GalleryToggler(){
     }
 
 }
-// var user1 = {
-//     login: "marek112",
-//     password: "maciek12",
-//     imie: "imie",
-//     nazwisko: "naziwsko"
-// }
-// var uzytkownicy =[marek,]
+var user1 = {
+    login: "Marek112",
+    password: "mareczek22",
+    imie: "Maciej",
+    nazwisko: "Kopyto"
+}
+var user2 = {
+    login: "MichalD",
+    password: "Douglas12",
+    imie: "Michal",
+    nazwisko: "Douglas"
+}
+var user3 = {
+    login: "KarMarn",
+    password: "Karolek12121",
+    imie: "Karol",
+    nazwisko: "Marnicki"
+}
+var user4 = {
+    login: "AriariMan",
+    password: "arianka12133",
+    imie: "Arianna",
+    nazwisko: "Mantel"
+}
+var user5 = {
+    login: "Michael",
+    password: "Dumnaski123",
+    imie: "Michael",
+    nazwisko: "Dumnas"
+}
+var uzytkownicy = [user1, user2, user3, user4, user5]
+
 //wprowadz kilku uzytkownikow. marta ma haslo marta123. jak bledne haslo lub login pokaz czerwony teskst pod inputem
 function loginFunction(){
+    var user1 = {
+        login: "a",
+        password: "b",
+        imie: "Maciej",
+        nazwisko: "Kopyto"
+    }
+    var user2 = {
+        login: "MichalD",
+        password: "Douglas12",
+        imie: "Michal",
+        nazwisko: "Douglas"
+    }
+    var user3 = {
+        login: "KarMarn",
+        password: "Karolek12121",
+        imie: "Karol",
+        nazwisko: "Marnicki"
+    }
+    var user4 = {
+        login: "AriariMan",
+        password: "arianka12133",
+        imie: "Arianna",
+        nazwisko: "Mantel"
+    }
+    var user5 = {
+        login: "Michealo",
+        password: "Dumnaski123",
+        imie: "Michael",
+        nazwisko: "Dumnas"
+    }
+    var uzytkownicy = [user1, user2, user3, user4, user5]
     var loginElemData = document.getElementsByClassName("login")[0].value
     var passwordElemData = document.getElementsByClassName("password")[0].value
+    var postLoginPasswordElem = document.getElementsByClassName("postLoginPassword")[0]
+    var postLoginLoginElem = document.getElementsByClassName("postLoginLogin")[0]
 
-    if(!(passwordElemData == "pass" || loginElemData == "admin")){
-        alert("Zle dane logowania. Sprobuj ponownie")
-        window.location.href = 'logowanie.html'
-    }else if(passwordElemData == "pass" && loginElemData == "admin"){
-        alert("Zalogowano poprawnie")
-        window.location.href = 'index.html'
+    for (var i = 0; i < uzytkownicy.length; i++){
+        var loginSuccess = false;
+        if(loginElemData == uzytkownicy[i].login && passwordElemData == uzytkownicy[i].password){
+            console.log("Zalogowano poprawnie, " + uzytkownicy[i].imie)
+            // window.location.href = 'index.html'
+            postLoginLoginElem.value = "poprawny login"
+            postLoginPasswordElem.value = "poprawne hasło"
+            postLoginPasswordElem.style.visibility = "visible"
+            postLoginPasswordElem.style.color = "green"
+            postLoginLoginElem.style.visibility = "visible"
+            postLoginLoginElem.style.color = "green"
+
+           return loginSuccess = true;
+        }
+
     }
+    if(loginSuccess == false){
+        console.log("niezalogowano, zle haslo")
+        postLoginLoginElem.value = "niepoprawny login"
+        postLoginPasswordElem.value = "niepoprawne hasło"
+        postLoginPasswordElem.style.visibility = "visible"
+        postLoginPasswordElem.style.color = "red"
+        postLoginLoginElem.style.visibility = "visible"
+        postLoginLoginElem.style.color = "red"
+        // window.location.href = 'logowanie.html'
+    }
+
+
 }
