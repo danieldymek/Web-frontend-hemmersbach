@@ -1,0 +1,582 @@
+.header{
+    width: 100%;
+    height: 50px;
+    background-color: #3D1255;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+html{
+    transition: .5s;
+
+}
+.leftBar{
+    width: 20%;
+    height: 700px;
+    background-color: #582A72;
+    float:left;
+    font-size: 27.5px;
+    padding-top: 0px;
+    margin-top: 0px;
+    /* text-align-last: center; */
+    
+
+
+}
+.midContent{
+    width: 60%;
+    height: 700px;
+    background-color: #764B8E;
+    float:left;
+    text-align: center;
+    /* background-image: url("https://ak.picdn.net/shutterstock/videos/1033186691/thumb/1.jpg"); */
+    background-size: 200%;
+
+    
+
+
+}
+.rightBar{
+    width: 20%;
+    height: 700px;
+    background-color: #582A72;
+    float:left;
+    text-align: center;
+    
+    
+
+
+}
+ td {
+    border: 2px solid rgba(0, 0, 0, 0.534);
+  }
+td {
+    color:rgba(255, 255, 255, 0.568)
+  }
+th {
+    color:rgba(255, 255, 255, 0.568)
+  }
+  .tableDiv{
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      text-align-last: center;
+      background-color: rgba(108, 11, 236, 0.349);
+      border: 1px solid;
+  }
+
+#kontakty2{
+    font-family: 'Roboto', sans-serif;
+}
+.tableController{
+    text-align-last: auto;
+}
+#buttonUser{
+    width: 202px;
+}
+#input3Select{
+    width: 80px;
+}
+
+
+
+
+.globalUzytkownicy{
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255, 255, 255, 0.749);
+}
+.globalKontakty{
+    color: rgba(255, 255, 255, 0.749);
+    font-family: 'Roboto', sans-serif;
+
+}
+.globalGaleria{
+    color: rgba(255, 255, 255, 0.749);
+    font-family: 'Roboto', sans-serif;
+
+}
+.globalHome{
+    color: rgba(255, 255, 255, 0.749);
+    font-family: 'Roboto', sans-serif;
+}
+/* //zmien menu napisy zeby bylo turbo czytelnie i kolorystyka strony z https://color.adobe.com/pl/create/color-wheel*/
+
+
+.homeButton, .userButton, .contactButton, .galleryButton {
+    transition-duration: 0.7s;
+    
+    width:50%;
+    height: 20%;
+    margin-top: 10px;
+    margin-left: 25%;
+    margin-bottom: 10px;
+    border-style: dashed;
+    border-color: #9F5B70;
+    background-color: #582A72;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .homeButton:hover, .userButton:hover, .contactButton:hover, .galleryButton:hover {
+    background-color: #260339;
+    color:white;
+    
+
+  }
+.homeButton:hover span {display:none}
+.userButton:hover span {display:none}
+.contactButton:hover span {display:none}
+.galleryButton:hover span {display:none}
+.homeButton:hover:before {
+    
+    text-align-last: center;
+    font-size: 26px;
+    padding: 20px;
+    content:".home()";
+    
+
+}
+.userButton:hover:before {
+    
+    text-align-last: center;
+    font-size: 26px;
+    content:".users()";
+
+    
+
+}
+.contactButton:hover:before {
+    
+    text-align-last: center;
+    font-size: 26px;
+    content:".contact()";
+    
+
+}
+.galleryButton:hover:before {
+    
+    text-align-last: center;
+    font-size: 26px;
+    content:".gallery()";
+    
+
+}
+.tableController{
+    color:white;
+    font-weight:bold;
+}
+#input0, #input1, #input2, #randomizeName, #randomizeSurname, #randomizeAge, #input3Select, #buttonUser, #userDeletorInput {
+    background-color: #764B8E;
+    text-align-last: center;
+    width: 75%;
+    color:white;
+    font-style: bolder;
+    border: 1px solid black;
+}
+#imie{
+    width: 50%;
+    height: 70px;
+    float:right;
+    color:white;
+}
+#nazwisko{
+    width: 50%;
+    height: 70px;
+    float:right;
+
+}
+#wiek{
+    width: 50%;
+    height: 70px;
+}
+#dostepnosc{
+    float:right;
+    width: 50%;
+    height: 70px;
+}
+.headerIcon{
+    height: 100%;
+    width: 24px;
+    text-align-last: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+   background:#2f0d42;
+
+}
+.tableDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mid-image{
+    width: 50%;
+    height: 50%;
+    margin-left: 5px;
+    float: right;
+    
+}
+.mid-image:hover + .btn{
+    width: 50%;
+    height: 50%;
+    margin-left: 5px;
+    float: right;
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 60%;
+    width: 100px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 30%;
+    border-color:rgba(0, 0, 0, 0);
+    transition: 0.5s;
+
+    
+
+}
+.midUnderHeaderText{
+    font-weight: bold;
+}
+#articleSize{
+    width: 90%;
+    text-align:justify;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+.midHeader{
+    text-align-last: center;
+}
+.btn:hover{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 60%;
+
+    width: 100px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 30%;
+    border-color:rgba(0, 0, 0, 0);
+    outline:none;
+
+
+}
+
+.btn{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 50%;
+
+    width: 0px;
+    height: 0px;
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    font-weight: bolder;
+    font-size: 120px;
+    outline:none;
+    transition: .1s;
+}
+.getSupportInput{
+    width: 600px;
+    height: 200px;
+    background-color: #582A72;
+    border: 2px solid #3D1255;
+    outline: none;
+    resize: none;
+    color: white;
+    border-radius: 3%;
+}
+.getSupportButton0{
+    background-color: #28B536;
+    border-radius: 50%;
+    outline: none;
+    font-weight: bolder;
+    width: 90px;
+    height: 30px;
+    text-align-last: center;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    box-shadow: 3px 3px 3px black;
+    transition: 0.5;
+
+    
+
+}
+
+.getSupportButton0:hover{
+    background-color: #37F549;
+    outline: none;
+    border-radius: 50%;
+    font-weight: bolder;
+    width: 90px;
+    height: 30px;
+    text-align-last: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px black;
+    transition: .5s;
+    align-items: center;
+
+}
+
+.getSupportButton0:active{
+    background-color: #1A7523;
+    outline: none;
+    border-radius: 50%;
+    font-weight: bolder;
+    width: 90px;
+    height: 30px;
+    text-align-last: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px black;
+    transition: .5s;
+    align-items: center;
+
+}
+
+.getSupportButton1{
+    background-color: #B51F19;
+    outline: none;
+    border-radius: 50%;
+    font-weight: bolder;
+    width: 90px;
+    height: 30px;
+    text-align-last: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px black;
+    align-items: center;
+
+}
+
+.getSupportButton1:hover{
+    background-color: #F52922;
+    outline: none;
+    border-radius: 50%;
+    font-weight: bolder;
+    width: 90px;
+    height: 30px;
+    text-align-last: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px black;
+    transition: .5s;
+    align-items: center;
+
+}
+
+.getSupportButton1:active{
+    background-color: #7A1411;
+    outline: none;
+    border-radius: 50%;
+    font-weight: bolder;
+    width: 90px;
+    height: 30px;
+    text-align-last: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px black;
+    transition: .5s;
+    align-items: center;
+}
+.contactDiv{
+    text-align-last: center;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 30%;
+    margin: auto;
+    padding: auto;
+    color:black;
+    background-color: #F5E5AB;
+    box-shadow: 15px 15px 15px black;
+    border-radius: 20%;
+    font-weight: bolder;
+    border: 5px solid #e6c44d
+}
+::placeholder { 
+    color: white;
+    opacity: .5; 
+    transition: 1s;
+  }
+  /* jezeli w tekscie nie bedzie na textarea nic wpisane przycisk ma byc wyszarzaly i nieklikalny javascript, popracowac nad wizytówką o tyle ile się da */
+
+
+
+.getSupportButton0:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #9c8686;
+  color: #666666;
+  cursor: no-drop;
+  transition: 0.5;
+}
+#contactEmail{
+    background-color: #582A72;
+    border-radius: 3%;
+    border: 2px solid #3D1255;
+    height: 20px;
+    
+
+}
+#contactName{
+    background-color: #582A72;
+    border-radius: 3%;
+    border: 2px solid #3D1255;
+    height: 20px;
+
+}
+#contactLabel0{
+    font-weight: bolder;
+}
+#contactLabel1{
+    font-weight: bolder;
+    
+}
+
+.stickynote{
+    width: 150px;
+    height: 170px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 3px black;
+    background-color: #F5E5AB;
+
+}
+/* .stickynote:hover{
+    width: 150px;
+    height: 170px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 3px black;
+    background-color: #F5E5AB;
+
+    opacity: 0.8;
+    transition: 0.3s; */
+/* } */
+
+.galImage{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 10%;
+
+}
+.galImage:hover {
+    width: 150px;
+    height: 150px;
+    opacity: 0.8;
+
+
+}
+.galImage:active{
+    width: 150px;
+    height: 150px;
+    visibility: hidden;
+
+}
+
+
+#galleryPart1, #galleryPart2, #galleryPart3{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+
+.underPhotoText{
+    color:black;
+    font-weight: bolder;
+    margin: 0px;
+}
+#galleryThing{
+    visibility: hidden;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 660px;
+    width: 1102px;
+    background-color: black;
+    position: absolute;
+    border-radius: 5% 5%;
+    border: 2px solid white;
+}
+.imageViewExitButton{
+    width: 55px;
+    height: 55px;
+    position:absolute;
+    margin-left: 68%;
+    font-size: 40px;
+    border-radius: 50%;
+    outline:none;
+    background: #B51F19;
+}
+.imageViewExitButton:hover{
+    width: 55px;
+    height: 55px;
+    position:absolute;
+    margin-left: 68%;
+    font-size: 40px;
+    border-radius: 50%;
+    outline:none;
+    background-color: #F52922;
+}
+.imageViewExitButton:active{
+    width: 55px;
+    height: 55px;
+    position:absolute;
+    margin-left: 68%;
+    font-size: 40px;
+    border-radius: 50%;
+    outline:none;
+    background-color: #7A1411;
+    transition: 0.5s;
+}
+.loginButton{
+    background-color: #582A72;
+    color: white; 
+    position:absolute;
+    margin-left: 80%;
+    width: 200px;
+}
+.login{
+    width: 100px;
+    height: 20px
+}
+.password{
+    width: 100px;
+    height: 20px
+    
+}
+.loginThing{
+        width: 150px;
+        height: 170px;
+        margin: auto;
+        padding-top: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 100px;
+        box-shadow: 3px 3px 3px black;
+        background-color: #F5E5AB;
+        color:black;
+        
+}

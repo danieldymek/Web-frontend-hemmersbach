@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="first.js" defer></script>
+    <link rel="stylesheet" href="myStyle.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class=globalHome >
+        <div class=header>
+            <button onclick=navLogin() class=loginButton><span><span class="material-icons">
+                    login
+                </span></span></button>
+            <div class="headerIcon">
+                <span class="material-icons" >
+                   login
+                    </span>
+            </div>
+            
+        </div>
+
+        <div class=leftBar>
+            
+           
+            <button class=homeButton onclick=navHome() ><span><span class="material-icons">
+                home
+                </span></span></button>
+                
+                
+                <button class=userButton onclick=navUsers()><span><span class="material-icons">
+                    emoji_people
+                    </span></span></button>
+                    
+                    
+            <button class=galleryButton onclick=navGal()><span><span class="material-icons">
+                camera_alt
+                </span></span></button>
+                
+                
+            <button class=contactButton onclick=navContact()><span><span class="material-icons">
+                perm_phone_msg
+                </span></span></button>
+            
+        </div>
+        <div class=midContent>
+            <br>
+            <div class=loginThing >
+                <label for=login >Login</label>
+                <input class=login name=login placeholder="Login" >
+                <br>
+                <br>
+                <label for=password >Password</label>
+                <input class=password name=password type=password placeholder="Password">
+                <br>
+                <br>
+
+                <button onclick="loginFunction()" type="submit">login</button> 
+            </div>
+
+
+            
+        </div>
+        <div class=rightBar>
+            rightBar
+
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>

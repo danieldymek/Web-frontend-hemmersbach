@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="first.js" defer></script>
+    <link rel="stylesheet" href="myStyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class=globalKontakty >
+        <div class=header>
+            <button onclick=navLogin() class=loginButton><span><span class="material-icons">
+                login
+                </span></span></button>
+            <div class="headerIcon">
+                <span class="material-icons">
+                    perm_phone_msg
+                    </span>
+            </div>
+
+        
+
+    </div>
+    <div class=leftBar>
+            
+           
+        <button class=homeButton onclick=navHome() ><span><span class="material-icons">
+            home
+            </span></span></button>
+            
+            
+            <button class=userButton onclick=navUsers()><span><span class="material-icons">
+                emoji_people
+                </span></span></button>
+                
+                
+        <button class=galleryButton onclick=navGal()><span><span class="material-icons">
+            camera_alt
+            </span></span></button>
+            
+            
+        <button class=contactButton onclick=navContact()><span><span class="material-icons">
+            perm_phone_msg
+            </span></span></button>
+        
+    </div>
+    <div class=midContent>
+        <h1>Find us at</h1>
+        <div class=contactDiv>
+            <br>
+            <p>E-mail: management@dymek.dev</p>
+            <p>Phone number: +48 111 222 333</p>
+            <p>Fax: (22)5887883</p>
+            <a href="https://portal.librus.pl/rodzina" target="_blank">strona internetowa (KLIK)</a>
+        </div>
+            <h1>Contact Us!</h1>
+            <label for="name" id="contactLabel0">Nick: </label>
+            <input type="text" id="contactName" name="name" placeholder="Nickname"/>
+
+            <label for="email" id="contactLabel1">Email: </label>
+            <input type="text" id="contactEmail" name="email" placeholder="E-mail"/>
+            <br>
+            <br>
+            <textarea class="getSupportInput" placeholder="Share with us"></textarea>
+            <br>
+            <br>
+            <button class="getSupportButton1" onclick="deleteFormData()">cancel</button>
+            <button class="getSupportButton0" onclick="dataSender()">send</button>
+
+            
+        
+    </div>
+    <div class=rightBar>
+        rightBar
+    </div>
+    </div></div>
+    
+</body>
+</html>
