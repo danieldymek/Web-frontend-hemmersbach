@@ -360,6 +360,7 @@ function loginFunction(){
             stickynoteDiv.style.visibility = "hidden"
             greetingsText.style.visibility = "visible"
             //anim
+            greetingsText.style.animationName = "example"
             greetingsText.style.animationDuration = "5s"
             greetingsText.innerHTML = "Welcome, " + uzytkownicy[i].imie + " " + uzytkownicy[i].nazwisko + "\n Redirecting..."
             
