@@ -72,9 +72,9 @@ function a(){
         getTBody.removeChild(getelement[0])
     }
     }
-    
+
     getTBody.appendChild(newTdElement5)//id
-    
+
     getTBody.appendChild(newTdElement1)//imie
     getTBody.appendChild(newTdElement2)//nazwisko
     getTBody.appendChild(newTdElement3)//wiek
@@ -91,7 +91,7 @@ function b(){
     var IDValue = document.getElementById("userDeletorInput").value
     var getelement = document.getElementsByClassName(IDValue)
     var getTBody = document.getElementsByTagName("tbody")[0]
-    
+
     var getTrElementLenght = getelement.length
     if(getTrElementLenght == 0){
         alert("NIE MA TAKIEGO ID!!")
@@ -99,8 +99,8 @@ function b(){
         for(var i = 0 ; i < 7; i ++){
             getTBody.removeChild(getelement[0])
         }
-    
-    
+
+
 }
 
 
@@ -112,13 +112,13 @@ function b(){
 
 // randomizacja imion
 function randName(){
-    
+
     var NameArr = ["Ilona","Liliana","Ewa","Jadwiga","Teresa","Magda","Danuta","Bogda","Felicja","Alice"]
     var rand = Math.floor(Math.random() * NameArr.length)
     return NameArr[rand]
 }
 function randSurname(){
-    
+
     var NameArr = ["Kowalczyk","Stępień","Sadowska","Wójcik","Stępień","Włodarczyk","Pietrzak","Kołodziej","Adamska","Czarnecka"]
     var rand = Math.floor(Math.random() * NameArr.length)
     return NameArr[rand]
@@ -181,7 +181,7 @@ function dataSender(){
             console.log("Sender: " + getFormName.value + ", Senders email: " + getFormEmail.value )
             console.log("senders message: " + getFormMessage.value)
         }
-        
+
     }
 
 }
@@ -226,7 +226,7 @@ function GalleryPopup(index){
     clonePhoto1.style.borderRadius = "5%"
     clonePhoto1Text.style.color = "white"
     clonePhoto1Text.style.fontSize = "40px"
-    
+
 }
 // reacting to div onclick and showing up image view method
 if(window.location.href == "file:///D:/OFFICE%20DATA/HTML/Web%20Frontend%20HemmersbachPoland/PROJECT-27-04-21-LOGOWANIE/indexGaleria.html"){
@@ -363,11 +363,11 @@ function loginFunction(){
             greetingsText.style.animationName = "example"
             greetingsText.style.animationDuration = "5s"
             greetingsText.innerHTML = "Welcome, " + uzytkownicy[i].imie + " " + uzytkownicy[i].nazwisko + "\n Redirecting..."
-            
+
             setTimeout(() => {
             window.location.href = 'index.html'
-                
-            }, 2000);
+
+          }, 2000);
             //if login details are good, return loginSuccess true
            return loginSuccess = true;
 
@@ -379,11 +379,8 @@ function loginFunction(){
     if(loginSuccess == false){
         console.log("niezalogowano, zle haslo")
         postLoginLoginElem.innerHTML = "incorrect login details"
-        postLoginPasswordElem.innerHTML = "incorrect login details"
         passwordElem.value = "";
         loginElem.value = "";
-        postLoginPasswordElem.style.visibility = "visible"
-        postLoginPasswordElem.style.color = "red"
         postLoginLoginElem.style.visibility = "visible"
         postLoginLoginElem.style.color = "red"
         // window.location.href = 'logowanie.html'
