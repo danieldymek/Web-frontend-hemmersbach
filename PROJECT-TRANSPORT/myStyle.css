@@ -1,3 +1,22 @@
 html{
-    background-color: black;
+    border-radius: 20%;
+    background-color: purple
+}
+label{
+  color: white;
+}
+input{
+  background-color: purple
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mid{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
