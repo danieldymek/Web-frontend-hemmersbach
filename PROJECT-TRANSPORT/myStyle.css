@@ -4,7 +4,7 @@ body{
 }
 h1{
   font-weight: bolder;
-  font-size: 60px;
+  font-size: 50px;
 }
 html{
   background-color: black;
@@ -62,4 +62,33 @@ button:hover{
     box-shadow: 3px 3px 3px black;
     transition: 1;
 
+}
+.values{
+  height: 50px;
+  display:flex;
+  text-align-last: center;
+  justify-content: center;
+  text-align: center;
+}
+#kmph, #load, #dist{
+  background-color: gray;
+  height: 30px;
+  outline: none;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+input{
+  /* font-weight: bolder; */
+  font-size: 15px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

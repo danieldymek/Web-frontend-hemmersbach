@@ -1,35 +1,42 @@
-
-
-var dist = 12;
-var kmph = 50;
-var loadWeight = 25000; //kilograms
-var distToEl = document.createElement("p")
-distToEl.innerHTML = "dystans do celu(A->B): " + dist + " km"
-var kmphToEl = document.createElement("p")
-kmphToEl.innerHTML = "srednia predkosc pojazdu: " + kmph + " kmph"
-var loadWeightToEl = document.createElement("p")
-loadWeightToEl.innerHTML = "zaladowanie pojazdu w kilogramach: " + loadWeight + " kg"
-var loading = Math.round(loadWeight * 0.0048);
-var unloading = Math.round(loadWeight * 0.0036);
-var distTime = (dist/kmph * 60);
-var breakTime = 45;
-var sleepTime = 660;
-var maxDriveTimeInOneRun = 270
-var maxDriveDaily = 540;
-var breakCount = Math.round(distTime / maxDriveTimeInOneRun);
-var breakTimePenalty = breakTime * breakCount;
-var toAppend = document.body.getElementsByClassName("append")[0]
-var br = document.createElement("br")
-var dataEl = document.createElement("p")
-dataEl.innerHTML = "DANE: "
 var hadBeenRun = false;
-var startButton = document.getElementById('btn')
-
-
 function driver() {
+  var dist = document.getElementById('dist').value;
+  var kmph = document.getElementById('kmph').value;
+  var loadWeight = document.getElementById('load').value; //kilograms
+  var distToEl = document.createElement("p")
+  distToEl.innerHTML = "dystans do celu(A->B): " + dist + " km"
+  var kmphToEl = document.createElement("p")
+  kmphToEl.innerHTML = "srednia predkosc pojazdu: " + kmph + " kmph"
+  var loadWeightToEl = document.createElement("p")
+  loadWeightToEl.innerHTML = "zaladowanie pojazdu w kilogramach: " + loadWeight + " kg"
+  var loading = Math.round(loadWeight * 0.0048);
+  var unloading = Math.round(loadWeight * 0.0036);
+  var distTime = (dist/kmph * 60);
+  var breakTime = 45;
+  var sleepTime = 660;
+  var maxDriveTimeInOneRun = 270
+  var maxDriveDaily = 540;
+  var breakCount = Math.round(distTime / maxDriveTimeInOneRun);
+  var breakTimePenalty = breakTime * breakCount;
+  var toAppend = document.body.getElementsByClassName("append")[0]
+  var br = document.createElement("br")
+  var dataEl = document.createElement("p")
+  dataEl.innerHTML = "DANE: "
+  var startButton = document.getElementById('btn')
   startButton.innerHTML = "ZATRZYMAJ"
   startButton.style.backgroundColor = "RED"
   startButton.style.disabled = "true"
+  if (dist == "" || dist < 0 || kmph == "" || kmph < 0 || loadWeight == "" || loadWeight < 0 ) {
+    if(dist < 0 || kmph < 0 || loadWeight < 0 ){
+      startButton.innerHTML = "WARTOŚCI PONIŻEJ ZERA"
+    }else{
+      startButton.innerHTML = "BRAK ARGUMENTÓW"
+    }
+    setTimeout(function () {
+      window.location.reload(true)
+    }, 1000);
+
+  }else{
 
   if(hadBeenRun == true ){
     window.location.reload(true)
@@ -134,6 +141,8 @@ function driver() {
       }
       driverSleepTime()
     }
+  }
+
 hadBeenRun = true;
 
     };
