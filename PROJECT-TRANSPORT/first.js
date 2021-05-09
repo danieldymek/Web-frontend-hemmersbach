@@ -1,4 +1,21 @@
 var hadBeenRun = false;
+function check() {
+  setInterval(function () {
+    var startButton = document.getElementById('btn')
+    var dist = document.getElementById('dist').value;
+    var kmph = document.getElementById('kmph').value;
+    var loadWeight = document.getElementById('load').value;
+    var notif = document.getElementsByClassName('warning')[0]
+    if(dist == "" || dist < 0 || kmph == "" || kmph < 0 || loadWeight == "" || loadWeight < 0){
+    notif.innerHTML = "Wprowadź dane"
+    notif.style.color = "ORANGE"
+    notif.style.visibility = "visible"
+  }else if(!(dist == "" || dist < 0 || kmph == "" || kmph < 0 || loadWeight == "" || loadWeight < 0)){
+        notif.style.visibility = "hidden"
+    }
+  }, 200);
+}
+
 function driver() {
   var dist = document.getElementById('dist').value;
   var kmph = document.getElementById('kmph').value;
@@ -6,7 +23,7 @@ function driver() {
   var distToEl = document.createElement("p")
   distToEl.innerHTML = "dystans do celu(A->B): " + dist + " km"
   var kmphToEl = document.createElement("p")
-  kmphToEl.innerHTML = "srednia predkosc pojazdu: " + kmph + " kmph"
+  kmphToEl.innerHTML = "srednia predkosc pojazdu: " + kmph + " km/h"
   var loadWeightToEl = document.createElement("p")
   loadWeightToEl.innerHTML = "zaladowanie pojazdu w kilogramach: " + loadWeight + " kg"
   var loading = Math.round(loadWeight * 0.0048);
