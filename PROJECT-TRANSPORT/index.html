@@ -5,22 +5,21 @@
     <title>Document</title>
     <script src="first.js" defer></script>
     <link rel="stylesheet" href="myStyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main">
-      <div class="mid">
-        <label for="dist">distance</label>
-        <input type="text" name="dist" id="dist">
-        <br>
-        <label for="kmph">avg kmph</label>
-        <input type="text" name="kmph" id="kmph">
-        <br>
-        <label for="pkgWeight">weight</label>
-        <input type="text" name="pkgWeight" id="pkgWeight">
-        <br>
-        <button type="button" name="button" id="btn" onclick=driver()>rozpocznij trase</button>
-      </div>
+<div class="main">
+  <div class="logs">
+    <h1>Szacowanie czasu jazdy kierowcy na podstawie dystansu, załadowania pojazdu i średniej prędkości na godzinę</h1>
+    <button id="btn" onclick="driver()">ROZPOCZNIJ</button>
+    <br>
 
-    </div>
+      <div class=append></div>
+  </div>
+</div>
+
+
+
 </body>
 </html>

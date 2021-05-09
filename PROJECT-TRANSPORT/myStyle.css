@@ -1,22 +1,65 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+}
+h1{
+  font-weight: bolder;
+  font-size: 60px;
+}
 html{
-    border-radius: 20%;
-    background-color: purple
-}
-label{
-  color: white;
-}
-input{
-  background-color: purple
+  background-color: black;
+  color: green;
+  user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 .main{
-  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.append{
+  text-align: center;
   justify-content: center;
   align-items: center;
 }
-.mid{
-  height: 100%;
-  width: 50%;
-  display: flex;
+/* #btn{
+  margin-left: 438px;
+  margin-right: 438px;
+} */
+.logs{
+  text-align: center;
   justify-content: center;
   align-items: center;
+  font-size: 30px;
+}
+button{
+  background-color: #28B536;
+  border-radius: 20%;
+  outline: none;
+  font-weight: bolder;
+  width: 180px;
+  height: 50px;
+  text-align-last: center;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  box-shadow: 3px 3px 3px black;
+  transition: 0.5;
+}
+button:hover{
+    background-color: #37F549;
+    border-radius: 20%;
+    outline: none;
+    font-weight: bolder;
+    width: 180px;
+    height: 50px;
+    text-align-last: center;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    box-shadow: 3px 3px 3px black;
+    transition: 1;
+
 }
