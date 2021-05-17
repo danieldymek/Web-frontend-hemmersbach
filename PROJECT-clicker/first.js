@@ -14,26 +14,50 @@ var credits = 0;
 var creditsPerClick = 1;
 var upgradeStep = 0;
 var upgradeCosts = [];
-function genUpgradeCosts() {
-  upgradeCosts.push(5 +(credits * 1.8))
+var idleValue = 0;
+var idleUpgradeCosts = [];
+var idleUpgradeStep = 0;
+setInterval(function () {
+  if(idleValue > 0){
+    credits = credits + parseFloat(idleValue.toFixed(2))
+    console.log("dodano " + idleValue + " credits");
+    console.log("balance: " + credits);
+  }
+}, 1000);
+function genClickUpgradeCosts() {
+  upgradeCosts.push(Math.floor(5 +(credits * 1.8)))
 }
-genUpgradeCosts()
+function genIdleUpgradeCosts() {
+  idleUpgradeCosts.push(Math.floor(25 +(credits * 1.4)))
+}
+genIdleUpgradeCosts();
+genClickUpgradeCosts()
 function a() { //clicker
   credits = credits + creditsPerClick
   console.log("balance: " + credits);
 
 }
 function b() { // clickAmountUpgrade
-  console.log(upgradeCosts[upgradeStep]);
   if (credits >= upgradeCosts[upgradeStep]) {
-    genUpgradeCosts()
-    upgradeStep++
-    console.log(credits);
+    genClickUpgradeCosts()
     credits = credits - upgradeCosts[upgradeStep]
+    upgradeStep++
     creditsPerClick++
     console.log("credits per click: " + creditsPerClick);
   }else{
-    console.log("upgradecost: " + upgradeCosts[upgradeStep]);
+    console.log("click upgradecost: " + upgradeCosts[upgradeStep]);
+    console.log("issuficient balance: " + credits);
+  }
+}
+function c() {
+  if (credits >= idleUpgradeCosts[idleUpgradeStep]) {
+    genClickUpgradeCosts();
+    credits = credits - idleUpgradeCosts[idleUpgradeStep]
+    idleUpgradeStep++
+    idleValue = idleValue + 0.1
+    console.log("credits per idleTick: " + idleValue);
+  }else{
+    console.log("idle upgrade cost: " + idleUpgradeCosts[idleUpgradeStep]);
     console.log("issuficient balance: " + credits);
   }
 }
