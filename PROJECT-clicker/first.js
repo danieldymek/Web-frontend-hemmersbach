@@ -10,25 +10,30 @@ function navGal(){
 function navContact(){
     window.location.href = 'indexKontakt.html'
 }
-
 var credits = 0;
-function a(){
-credits++
-console.log(credits)
+var creditsPerClick = 1;
+var upgradeStep = 0;
+var upgradeCosts = [];
+function genUpgradeCosts() {
+  upgradeCosts.push(5 +(credits * 1.8))
 }
+genUpgradeCosts()
+function a() { //clicker
+  credits = credits + creditsPerClick
+  console.log("balance: " + credits);
 
-function b(){
-    if(credits >= 20){
-        var minus =  Math.floor(Math.random() * (credits * 1/2))
-        credits = credits - minus
-        console.log("roll kupiony credits: " + credits)
-        var rand = Math.floor(Math.random() * (credits))
-        credits = credits + rand
-        console.log(rand)
-
-
-    }else{
-        console.log("nie masz wystarczająco credits na upgrade")
-    }
-    
-    }
+}
+function b() { // clickAmountUpgrade
+  console.log(upgradeCosts[upgradeStep]);
+  if (credits >= upgradeCosts[upgradeStep]) {
+    genUpgradeCosts()
+    upgradeStep++
+    console.log(credits);
+    credits = credits - upgradeCosts[upgradeStep]
+    creditsPerClick++
+    console.log("credits per click: " + creditsPerClick);
+  }else{
+    console.log("upgradecost: " + upgradeCosts[upgradeStep]);
+    console.log("issuficient balance: " + credits);
+  }
+}
