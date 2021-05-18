@@ -17,6 +17,8 @@ var upgradeCosts = [];
 var idleValue = 0;
 var idleUpgradeCosts = [];
 var idleUpgradeStep = 0;
+var interval = 100
+var power = 0
 genIdleUpgradeCosts();
 genClickUpgradeCosts();
 
@@ -34,29 +36,35 @@ var clickUpgradeCostElement = document.createElement('h3')
 clickUpgradeCostElement.textContent = "click power upgrade cost: " + upgradeCosts[upgradeStep]
 midContentElement.appendChild(clickUpgradeCostElement)
 
+var idleValueElement = document.createElement('h3')
+idleValueElement.textContent = "credits generator tier: " + idleValue;
+midContentElement.appendChild(idleValueElement)
+
+var idleUpgradeElement = document.createElement('h3')
+idleUpgradeElement.textContent = "credits generator tier upgrade: " + idleUpgradeCosts[idleUpgradeStep]
+midContentElement.appendChild(idleUpgradeElement)
 
 
 setInterval(function () {
   balanceElement.textContent = "credits: " + credits;
-}, 100);
+}, interval);
 
 setInterval(function () {
   if(idleValue > 0){
     credits = credits + idleValue
-    console.log("dodano " + idleValue + " credits");
-    console.log("balance: " + credits);
+
   }
-}, 100);
+}, interval);
+
 function genClickUpgradeCosts() {
-  upgradeCosts.push(Math.floor(5 +(credits * 1.8)))
+  upgradeCosts.push(Math.floor(5 +(credits * 1.4)))
 }
 function genIdleUpgradeCosts() {
-  idleUpgradeCosts.push(Math.floor(25 +(credits * 1.4)))
+  idleUpgradeCosts.push(Math.floor(25 +(credits * 1.8)))
 }
 
 function a() { //clicker
   credits = credits + creditsPerClick
-  console.log("balance: " + credits);
   balanceElement.textContent = "credits: " + credits;
 }
 function b() { // clickAmountUpgrade
@@ -66,33 +74,31 @@ function b() { // clickAmountUpgrade
     credits = credits - upgradeCosts[upgradeStep]
     upgradeStep++
     creditsPerClick++
-    console.log("credits per click: " + creditsPerClick);
     balanceElement.textContent = "credits: " + credits;
     clickUpgradeCostElement.textContent = "click power upgrade cost: " + upgradeCosts[upgradeStep]
     creditsPerClickElement.textContent = "credits per click: " + creditsPerClick;
 
   }else{
-    console.log("click upgradecost: " + upgradeCosts[upgradeStep]);
-    console.log("issuficient balance: " + credits);
-    balanceElement.textContent = "credits: " + credits;
     clickUpgradeCostElement.textContent = "click power upgrade cost: " + upgradeCosts[upgradeStep]
     creditsPerClickElement.textContent = "credits per click: " + creditsPerClick;
 
   }
 }
-function c() {
+function c() { //idle upgrade
   if (credits >= idleUpgradeCosts[idleUpgradeStep]) {
     genIdleUpgradeCosts();
     credits = credits - idleUpgradeCosts[idleUpgradeStep]
     idleUpgradeStep++
-    idleValue++
-    console.log("credits per idleTick: " + idleValue);
+    power++
+    idleValue =  idleValue + 1 + (Math.pow(2, power))
     balanceElement.textContent = "credits: " + credits;
+    idleValueElement.textContent = "credits generator tier: " + idleValue;
+    idleUpgradeElement.textContent = "credits generator tier upgrade: " + idleUpgradeCosts[idleUpgradeStep]
+
 
   }else{
-    console.log("idle upgrade cost: " + idleUpgradeCosts[idleUpgradeStep]);
-    console.log("issuficient balance: " + credits);
-    balanceElement.textContent = "credits: " + credits;
+    idleUpgradeElement.textContent = "credits generator tier upgrade: " + idleUpgradeCosts[idleUpgradeStep]
+
 
 
   }
