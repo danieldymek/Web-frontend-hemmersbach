@@ -11,7 +11,7 @@ function navContact(){
     window.location.href = 'indexKontakt.html'
 }
 var credits = 0;
-var creditsPerClick = 1;
+var creditsPerClick = 100;
 var upgradeStep = 0;
 var upgradeCosts = [];
 var idleValue = 0;
@@ -19,7 +19,7 @@ var idleUpgradeCosts = [];
 var idleUpgradeStep = 0;
 setInterval(function () {
   if(idleValue > 0){
-    credits = credits + parseFloat(idleValue.toFixed(2))
+    credits = credits + idleValue
     console.log("dodano " + idleValue + " credits");
     console.log("balance: " + credits);
   }
@@ -42,7 +42,7 @@ function b() { // clickAmountUpgrade
     genClickUpgradeCosts()
     credits = credits - upgradeCosts[upgradeStep]
     upgradeStep++
-    creditsPerClick++
+    creditsPerClick = 1 * 1.2
     console.log("credits per click: " + creditsPerClick);
   }else{
     console.log("click upgradecost: " + upgradeCosts[upgradeStep]);
@@ -51,10 +51,10 @@ function b() { // clickAmountUpgrade
 }
 function c() {
   if (credits >= idleUpgradeCosts[idleUpgradeStep]) {
-    genClickUpgradeCosts();
+    genIdleUpgradeCosts();
     credits = credits - idleUpgradeCosts[idleUpgradeStep]
     idleUpgradeStep++
-    idleValue = idleValue + 0.1
+    idleValue++
     console.log("credits per idleTick: " + idleValue);
   }else{
     console.log("idle upgrade cost: " + idleUpgradeCosts[idleUpgradeStep]);
