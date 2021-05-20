@@ -3,9 +3,9 @@
     height: 50px;
     background-color: #3D1255;
     text-align-last: center;
-    
-    
-    
+
+
+
 
 }
 .leftBar{
@@ -17,7 +17,7 @@
     padding-top: 0px;
     margin-top: 0px;
     /* text-align-last: center; */
-    
+
 
 
 }
@@ -27,7 +27,7 @@
     background-color: #764B8E;
     float:left;
     text-align: center;
-    
+
 
 
 }
@@ -37,7 +37,7 @@
     background-color: #582A72;
     float:left;
     text-align: center;
-    
+
 
 
 }
@@ -70,7 +70,7 @@
 
 .homeButton, .userButton, .contactButton, .galleryButton {
     transition-duration: 0.7s;
-    
+
     width:50%;
     height: 20%;
     margin-top: 10px;
@@ -81,7 +81,7 @@
     background-color: #582A72;
     color: black;
   }
-  
+
   .homeButton:hover, .userButton:hover, .contactButton:hover, .galleryButton:hover {
     background-color: #260339;
     color:white;
@@ -92,37 +92,66 @@
 .contactButton:hover span {display:none}
 .galleryButton:hover span {display:none}
 .homeButton:hover:before {
-    
+
     text-align-last: center;
     font-size: 26px;
     padding: 20px;
     content:".home()";
-    
+
 
 }
 .userButton:hover:before {
-    
+
     text-align-last: center;
     font-size: 26px;
     content:".users()";
-    
+
 
 }
 .contactButton:hover:before {
-    
+
     text-align-last: center;
     font-size: 26px;
     content:".contact()";
-    
+
 
 }
 .galleryButton:hover:before {
-    
+
     text-align-last: center;
     font-size: 26px;
     content:".gallery()";
-    
+
 
 }
+.clickbutton{
+  height: 30%;
+  width: 50%;
+  border-radius: 60%;
+  background-color: #582A72;
+  border-style: solid;
 
-
+}
+.clickbutton:active{
+  transition: 0.5s;
+  height: 30%;
+  width: 50%;
+  background-color: #47225c;
+  border-style:dotted;
+  border-width: thick;
+}
+.recieveIdle {
+  height: 10%;
+  width: 25%;
+  border-radius: 60%;
+  background-color: lime;
+  border-style: solid;
+}
+.recieveIdle:active {
+  transition: 0.5s;
+  height: 10%;
+  width: 25%;
+  background-color: green;
+  border-style:dotted;
+  border-width: thick;
+}
