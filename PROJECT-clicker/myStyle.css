@@ -127,7 +127,7 @@
 .clickbutton{
   height: 30%;
   width: 50%;
-  border-radius: 60%;
+  border-radius: 10%;
   background-color: #582A72;
   border-style: solid;
 
@@ -142,16 +142,32 @@
 }
 .recieveIdle {
   height: 10%;
-  width: 25%;
-  border-radius: 60%;
+  width: 50%;
+  border-radius: 10%;
   background-color: lime;
   border-style: solid;
+  visibility: hidden;
 }
 .recieveIdle:active {
   transition: 0.5s;
   height: 10%;
-  width: 25%;
+  width: 50%;
   background-color: green;
   border-style:dotted;
   border-width: thick;
+
+}
+.idleUpgradeButton, .clickUpgradeButton{
+  height: 10%;
+  width: 50%;
+  border-radius: 10%;
+  background-color: lime;
+  border-style: solid;
+}
+.idleUpgradeButton:active, .clickUpgradeButton:active{
+  height: 10%;
+  width: 50%;
+  border-radius: 10%;
+  background-color: yellow;
+  border-style: solid;
 }
