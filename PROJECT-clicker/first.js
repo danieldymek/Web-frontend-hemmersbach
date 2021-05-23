@@ -11,7 +11,7 @@ function navContact(){
     window.location.href = 'indexKontakt.html'
 }
 
-let credits = 1212;
+let credits = 25;
 let creditsPerClick = 1;
 let upgradeStep = 0;
 let upgradeCosts = [5];
@@ -22,6 +22,9 @@ let interval = 600
 let idlepower = 0
 let clickpower = 0
 let idleCreditsBuffor = 0;
+let idleBufforLimits = [50];
+let idleBufforLimitLevel = 0;
+
 
 //default data
   var balanceString = "Total clicks: " + credits;
@@ -59,6 +62,8 @@ idleBufforElement.textContent = autoClickerVaultString
 
 //inHTML elements references
 
+var upgradeIdleButton = document.getElementsByClassName('idleUpgradeButton')[0]
+
 var recieveIdleButton = document.getElementsByClassName('recieveIdle')[0];
 
 setInterval(function () {
@@ -68,13 +73,16 @@ setInterval(function () {
   var clicksUpgradeCostString = "Click levelup cost: " + upgradeCosts[upgradeStep];
   var autoClickerUpgradeCostString = "Autoclicker levelup cost: " + idleUpgradeCosts[idleUpgradeStep];
   var autoClickerVaultString = "Clicks vault: " + idleCreditsBuffor;
-  if(idleValue > 0){
-    idleCreditsBuffor = idleCreditsBuffor + idleValue
+    if(idleValue > 0){
+      if(idleCreditsBuffor > idleBufforLimits[idleBufforLimitLevel]){
+        idleCreditsBuffor = idleCreditsBuffor + idleValue
+        idleBufforElement.style.backgroundColor = "transparent"
+        idleBufforElement.textContent = autoClickerVaultString
+      }
 
-    idleBufforElement.style.backgroundColor = "transparent"
-    idleBufforElement.textContent = autoClickerVaultString
+    }
 
-  }
+
 }, interval);
 
 function genClickUpgradeCosts() {
@@ -84,7 +92,10 @@ function genClickUpgradeCosts() {
 function genIdleUpgradeCosts() {
   idleUpgradeCosts.push(Math.floor(idleUpgradeCosts[idleUpgradeStep] * 2.5))
   console.log("idle: " + idleUpgradeCosts);
+}
 
+function genIdleBufforLimit() {
+  idleBufforLimits.push(Math.floor(idleBufforLimits[idleBufforLimitLevel] * 1.2))
 }
 
 function a() { //clicker
@@ -157,8 +168,15 @@ function c() { //idle upgrade
   if (credits >= idleUpgradeCosts[idleUpgradeStep]) {
     genIdleUpgradeCosts();
     credits = credits - idleUpgradeCosts[idleUpgradeStep]
+    idleBufforLimitLevel++
     idleUpgradeStep++
+<<<<<<< HEAD
     idlepower++
+=======
+    power++
+    idleBufforLimitLevel++
+    genIdleBufforLimit()
+>>>>>>> 41278fa29a20686def1980b602c8fd104a972cda
     midContentElement.appendChild(idleValueElement)
     midContentElement.appendChild(idleBufforElement)
     idleValue = idleValue + 1 + (Math.pow(2, idlepower))
@@ -171,6 +189,8 @@ function c() { //idle upgrade
     balanceElement.textContent = balanceString
     idleValueElement.textContent = autoClickerLevelString
     idleUpgradeElement.textContent = "Autoclicker levelup cost: " + idleUpgradeCosts[idleUpgradeStep];
+    upgradeIdleButton.textContent = "Upgrade Autoclicker"
+
     if (idleUpgradeStep > 1) {
       setTimeout(function () {
         idleValueElement.style.backgroundColor = "green"
