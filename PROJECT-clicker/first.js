@@ -19,7 +19,8 @@ let idleValue = 0;
 let idleUpgradeCosts = [25];
 let idleUpgradeStep = 0;
 let interval = 600
-let power = 0
+let idlepower = 0
+let clickpower = 0
 let idleCreditsBuffor = 0;
 
 //default data
@@ -103,7 +104,10 @@ function b() { // clickAmountUpgrade
     genClickUpgradeCosts()
     credits = credits - upgradeCosts[upgradeStep]
     upgradeStep++
-    creditsPerClick++
+    clickpower++
+    creditsPerClick = creditsPerClick + 1 + (Math.pow(2, clickpower))
+
+
     var balanceString = "Total clicks: " + credits;
     var clicksPerClickString = "Clicks per click: " + creditsPerClick;
     var autoClickerLevelString = "Autoclicker level: " + idleUpgradeStep;
@@ -154,10 +158,10 @@ function c() { //idle upgrade
     genIdleUpgradeCosts();
     credits = credits - idleUpgradeCosts[idleUpgradeStep]
     idleUpgradeStep++
-    power++
+    idlepower++
     midContentElement.appendChild(idleValueElement)
     midContentElement.appendChild(idleBufforElement)
-    idleValue = idleValue + 1 + (Math.pow(2, power))
+    idleValue = idleValue + 1 + (Math.pow(2, idlepower))
     var balanceString = "Total clicks: " + credits;
     var clicksPerClickString = "Clicks per click: " + creditsPerClick;
     var autoClickerLevelString = "Autoclicker level: " + idleUpgradeStep;
@@ -203,11 +207,7 @@ function c() { //idle upgrade
 
     }, interval);
     {
-      // setTimeout(function () {
-      //   idleUpgradeElement.style.backgroundColor = "transparent"
-      //   idleUpgradeElement.textContent = "Autoclicker levelup cost: " + idleUpgradeCosts[idleUpgradeStep];
-      //
-      // }, interval);
+
     }
     }
       else{
