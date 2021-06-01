@@ -12,7 +12,7 @@ function navContact(){
 }
 
 let credits = 0;
-let creditsPerClick = 4.494229783818834e+99;
+let creditsPerClick = 1;
 let upgradeStep = 0;
 let upgradeCosts = [5];
 let idleValue = 0;
