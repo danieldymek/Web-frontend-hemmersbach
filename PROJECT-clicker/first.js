@@ -12,7 +12,7 @@ function navContact(){
 }
 
 let credits = 0;
-let creditsPerClick = 1;
+let creditsPerClick = 122;
 let upgradeStep = 0;
 let upgradeCosts = [5];
 let idleValue = 0;
@@ -61,9 +61,45 @@ idleBufforElement.textContent = autoClickerVaultString
 
 //inHTML elements references
 
-var upgradeIdleButton = document.getElementsByClassName('idleUpgradeButton')[0]
+let upgradeIdleButton = document.getElementsByClassName('idleUpgradeButton')[0]
 
-var recieveIdleButton = document.getElementsByClassName('recieveIdle')[0];
+let recieveIdleButton = document.getElementsByClassName('recieveIdle')[0];
+
+let upgradeClickButton = document.getElementsByClassName('clickUpgradeButton')[0]
+const refreshUpgradeButtons = () =>{
+  if(credits <= upgradeCosts[upgradeStep]){
+    upgradeClickButton.disabled = true;
+    upgradeClickButton.textContent = "Issuficient credits, you need to click more!"
+    upgradeClickButton.style.backgroundColor = "grey"
+    upgradeClickButton.style.color = "black"
+    if(upgradeStep > 0){
+      upgradeClickButton.textContent = "Issuficient clicks, you need " + (upgradeCosts[upgradeStep] - credits) + " more"
+    }
+  }
+  if(credits >= upgradeCosts[upgradeStep]){
+    upgradeClickButton.disabled = false;
+    upgradeClickButton.textContent = "Upgrade Click Power"
+    upgradeClickButton.style.backgroundColor = "lime"
+  }
+  if(credits <= idleUpgradeCosts[idleUpgradeStep]){
+    upgradeIdleButton.disabled = true;
+    upgradeIdleButton.textContent = "Issuficient credits, you need to click more!"
+    upgradeIdleButton.style.backgroundColor = "grey"
+    upgradeIdleButton.style.color = "black"
+    if(idleUpgradeStep > 0){
+      upgradeIdleButton.textContent = "Issuficient clicks, you need " + (idleUpgradeCosts[idleUpgradeStep] - credits) + " more"
+    }
+  }
+  if(credits >= idleUpgradeCosts[idleUpgradeStep]){
+    upgradeIdleButton.disabled = false;
+    upgradeIdleButton.textContent = "Upgrade Autoclicker"
+    upgradeIdleButton.style.backgroundColor = "lime"
+  }
+
+}
+refreshUpgradeButtons()
+
+
 
 setInterval(function () {
   var balanceString = "Total clicks: " + credits;
@@ -85,30 +121,25 @@ function valueConverter(){
     if (credits >= 1000 && credits <= 999999) {
       balanceString = "Total clicks: " + (credits / 1000).toFixed(1) + "k"
       balanceElement.textContent = balanceString;
-      console.log("one");
     }
     if (Math.round(credits / 1000) == 1000) {
       balanceString = "Total clicks: " + (credits / 1000000).toFixed(1) + "m"
       balanceElement.textContent = balanceString;
-      console.log("two");
 
     }
     if (credits >= 1000000 && credits <= 999999999) {
       balanceString = "Total clicks: " + (credits / 1000000).toFixed(1) + "m"
       balanceElement.textContent = balanceString;
-      console.log("three");
 
     }
     if (Math.round(credits / 100000) > 1000) {
       balanceString = "Total clicks: " + (credits / 100000000).toFixed(1) + "b"
       balanceElement.textContent = balanceString;
-      console.log("four");
 
     }
     if (credits >= 1000000000 && credits <= 1000000000 ) {
       balanceString = "Total clicks: " + (credits / 100000000).toFixed(1) + "b"
       balanceElement.textContent = balanceString;
-      console.log("five");
 
     }
     // var balanceString = "Total clicks: " + credits
@@ -120,16 +151,29 @@ setInterval(function () {
 }, interval);
 
 function genClickUpgradeCosts() {
-  upgradeCosts.push(Math.floor(upgradeCosts[upgradeStep] * 1.8))
-  console.log("click: " + upgradeCosts);
+  upgradeCosts.push(Math.floor(upgradeCosts[upgradeStep] * 1.7))
+  //array data optimization
+  if (upgradeCosts.length > 2) {
+    upgradeCosts.splice(0, (upgradeCosts.length - 2))
+    upgradeStep--
+  }
 }
 function genIdleUpgradeCosts() {
   idleUpgradeCosts.push(Math.floor(idleUpgradeCosts[idleUpgradeStep] * 2.5))
-  console.log("idle: " + idleUpgradeCosts);
+  //array data optimization
+  if (idleUpgradeCosts.length > 2) {
+    idleUpgradeCosts.splice(0, (idleUpgradeCosts.length - 2))
+    idleUpgradeStep--
+  }
 }
 
 function genIdleBufforLimit() {
   idleBufforLimits.push(Math.round(idleBufforLimits[idleBufforLimitLevel - 1] * 2.1))
+  //array data optimization
+  if (idleBufforLimits.length > 2) {
+    idleBufforLimits.splice(0, (idleBufforLimits.length - 2))
+    idleBufforLimitLevel--
+  }
 }
 
 function a() { //clicker
@@ -140,7 +184,10 @@ function a() { //clicker
   var clicksUpgradeCostString = "Click levelup cost: " + upgradeCosts[upgradeStep];
   var autoClickerUpgradeCostString = "Autoclicker levelup cost: " + idleUpgradeCosts[idleUpgradeStep];
   var autoClickerVaultString = "Clicks vault: " + idleCreditsBuffor;
+  balanceElement.style.transition = "all 1s"
   balanceElement.textContent = balanceString
+
+  refreshUpgradeButtons()
   valueConverter()
 
 }
@@ -164,6 +211,7 @@ function b() { // clickAmountUpgrade
     clickUpgradeCostElement.textContent = clicksUpgradeCostString
     creditsPerClickElement.textContent = clicksPerClickString
     valueConverter()
+    refreshUpgradeButtons()
 
 
     setTimeout(function () {
@@ -223,6 +271,8 @@ function c() { //idle upgrade
     idleUpgradeElement.textContent = "Autoclicker levelup cost: " + idleUpgradeCosts[idleUpgradeStep];
     upgradeIdleButton.textContent = "Upgrade Autoclicker"
     valueConverter()
+    refreshUpgradeButtons()
+
 
 
     if (idleUpgradeStep > 1) {
@@ -265,9 +315,10 @@ function c() { //idle upgrade
     }
     }
       else{
+
     idleUpgradeElement.textContent = "Autoclicker levelup cost: " + idleUpgradeCosts[idleUpgradeStep];
   }
-  if(idleUpgradeStep == 0 || isUpgraded == false){
+  if(idleUpgradeStep >= 1 && isUpgraded == false){
     recieveIdleButton.style.visibility = "visible";
 
 
@@ -303,8 +354,6 @@ setTimeout(function () {
 
 }, 800);
 
-
-
 isUpgraded = true;
   }
 }
@@ -320,6 +369,8 @@ function d() {
   var autoClickerVaultString = "Clicks vault: " + idleCreditsBuffor;
   balanceElement.textContent = balanceString
   valueConverter()
+  refreshUpgradeButtons()
+
 
   if (idleUpgradeStep > 0) {
     idleBufforElement.textContent = autoClickerVaultString
